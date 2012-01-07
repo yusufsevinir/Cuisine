@@ -1,0 +1,7 @@
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\MvcMusicStore.dll
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\MvcMusicStore.pdb
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\EntityFramework.dll
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\EntityFramework.xml
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\obj\Debug\MvcMusicStore.dll
+C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\obj\Debug\MvcMusicStore.pdb
