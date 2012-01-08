@@ -2,325 +2,67 @@
 <html>
 <head>
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" 
+    <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" 
         type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" 
         type="text/javascript"></script>
+    <style type="text/css">
+      body {
+        padding-top: 100px;
+      }
+    </style>
 </head>
 <body>
-    <div class="wrap" id="three_columns">
-        <div id="head">
-  
-            <h1 class="logo"><a href="/"><span>Vladimir Arts</span></a></h1>
-            <div class="basket"><a href="/shop/Basket"><span>Shopping Basket</span><br><br> view your basket</a></div>
-            <div class="top_banner"><a href="#"><img src="/Content/Images/top_banner.png" width="218" height="44" alt=""></a></div>
-            <div id="search">
-              <form id="searchform" name="searchform" action="/Search/" method="get">
-                <input name="input" type="text" tabindex="1" onblur="if (this.value==''){this.value='enter a keyword or an item #'};" onfocus="if(this.value=='enter a keyword or an item #'){this.value=''};" value="enter a keyword or an item #">
-                <input name="search" type="submit" value="" class="button">
-              </form>
-            </div>
-     </div>
-        <div id="main_nav">
-    
-    <ul id="nav">
-      <li class="top"><a href="/" class="top_link"><span>Home</span></a></li>
-      <li class="top"><a href="/shop" class="top_link"><span class="down">Fine Art</span></a>
-        <ul class="sub">
-          <li><a href="/shop/Product/Index/14?index=Category">Limited Editions</a></li>
-          <li><a href="/shop/Product/Index/15?index=Category">Prints</a></li>
-          <li><a href="/shop/Product/Index/16?index=Category">Posters</a></li>
-        </ul>
-      </li>
-      <li class="top"><a href="/shop/Product/Index/13?index=Category" class="top_link"><span>Clearance Art</span></a></li>
-      <li class="top"><a href="/cms/Custom_Picture_Framing" class="top_link"><span>Custom Framing</span></a></li>
-      <li class="top"><a href="/cms/Show_Locator" class="top_link"><span>Show Locator</span></a></li>
-      <li class="top"><a href="/cms/Frequently_Asked_Questions" class="top_link"><span>FAQ</span></a></li>
-      <li class="top"><a href="/cms/Our_History" class="top_link"><span>About Us</span></a></li>
-      <li class="top"><a href="/cms/Contact_Us" class="top_link"><span>Contact Us</span></a></li>
-    </ul>
-    <div id="login_status">
-  Guest | <a href="https://www.vladimirarts.com/shop/Login">Login</a>    
-  </div>
-  </div>
-        <div class="content clearfix">
-    <div class="left_column">
-    <!-- Admin menu should only show when the user is an administrator -->
-            
-      <div class="product_menu">
-        <h2><span>Product Categories</span></h2>
-        <ul id="prod_nav" class="clearfix">
-          <li class="top"><a class="top_link" href="/shop/Product/Index/72?index=Category">Military Art</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/3?index=Category">Air Force Academy</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/4?index=Category">Americana/Nostalgia</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/5?index=Category">Animals/Wildlife</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/6?index=Category">Aviation</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/8?index=Category">Buffalo Soldier</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/10?index=Category">Civil War</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/11?index=Category">Desert Storm</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/12?index=Category">Enduring Freedom</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/64?index=Category">Fantasy/Fairytale</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/47?index=Category">Iraqi Freedom</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/55?index=Category">Korean War</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/14?index=Category">Limited Editions</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/58?index=Category">Medieval</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/2?index=Category">Military Academy</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/73?index=Category">Military Women</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/57?index=Category">NASA</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/65?index=Category">Native American</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/50?index=Category">NCO</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/59?index=Category">OCS</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/54?index=Category">Other Conflicts</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/16?index=Category">Posters</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/15?index=Category">Prints</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/53?index=Category">Revolutionary War</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/19?index=Category">Ships/Submarines</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/67?index=Category">USMA Class of 95 Project</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/61?index=Category">Vietnam</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/48?index=Category">West Point</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/63?index=Category">Western</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/56?index=Category">WWI</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/49?index=Category">WWII</a></li><li class="top"><a class="top_link" href="/shop/Product/Index/78?index=Category">Inspirational</a></li>
 
-          
-            
-        </ul>
-        
-      </div>
-                        
-
-      <div class="box newsletter_box">
-        <h2>Newsletter</h2>
-        <p>Sign up for our newsletter and stay up-to-date with the latest offers and newest products.</p>
-        <form action="/shop/MailingList" method="get">
-          <input name="email" type="text" tabindex="1" onblur="if (this.value==''){this.value='E-mail Address'};" onfocus="if(this.value=='E-mail Address'){this.value=''};" value="E-mail Address">
-          <div align="right">
-            <input name="subscribe" type="submit" value="Continue" class="button">
-          </div>
-        </form>
-      </div>
-      <div class="payment_box">
-        <h2>We Accept:</h2>
-        <img src="/Content/Images/payment_options.png" width="172" alt=""> </div>
-    </div>
-    
-    
-
-    <div class="main_content">
-
-        
-      <div class="jflow-content-slider">
-        <div id="jFlowSlide" style="position: relative; width: 554px; height: 228px; overflow-x: hidden; overflow-y: hidden; "><div id="slides" style="position: relative; width: 2770px; height: 228px; overflow-x: hidden; overflow-y: hidden; margin-left: -2216px; ">
-          <div class="jFlowSlideContainer" style="position: relative; width: 554px; height: 228px; float: left; overflow-x: hidden; overflow-y: hidden; "><div class="slide-wrapper"><a href="../Product/Tribute___Military_Edition_by_Marc_Wolfe"><img src="/Content/Images/banner-01.jpg" alt="" width="554" height="288"></a></div></div>
-          <div class="jFlowSlideContainer" style="position: relative; width: 554px; height: 228px; float: left; overflow-x: hidden; overflow-y: hidden; "><div class="slide-wrapper"><img src="/Content/Images/banner-02.jpg" alt="" width="554" height="288"></div></div>
-          <div class="jFlowSlideContainer" style="position: relative; width: 554px; height: 228px; float: left; overflow-x: hidden; overflow-y: hidden; "><div class="slide-wrapper"><img src="/Content/Images/banner-03.jpg" alt="" width="554" height="288"></div></div>
-          <div class="jFlowSlideContainer" style="position: relative; width: 554px; height: 228px; float: left; overflow-x: hidden; overflow-y: hidden; "><div class="slide-wrapper"><img src="/Content/Images/banner-04.jpg" alt="" width="554" height="288"></div></div>
-          <div class="jFlowSlideContainer" style="position: relative; width: 554px; height: 228px; float: left; overflow-x: hidden; overflow-y: hidden; "><div class="slide-wrapper"><img src="/Content/Images/banner-05.jpg" alt="" width="554" height="288"></div></div>
-        </div></div>
-        <div id="myController">
-          <div class="quick_nav"><span class="jFlowPrev"><img src="/Content/Images/jFlowPrev-arrow.gif" width="20" height="18" alt="Prev"></span> <span class="jFlowControl">1</span> <span class="jFlowControl">2</span> <span class="jFlowControl">3</span> <span class="jFlowControl">4</span> <span class="jFlowControl jFlowSelected">5</span><span class="jFlowNext"><img src="/Content/Images/jFlowNext_arrow.gif" width="20" height="18" alt="Next"></span></div>
-          <div class="collection_name"><a href="../Product/Tribute___Military_Edition_by_Marc_Wolfe">Tribute by Marc Wolfe <strong>$75</strong></a></div>
-        </div>
-        <div class="clear"></div>
-      </div>
-
-      <div class="products_box featured">
-        <h2 class="box_title"><a href="/shop"><span>Browse Collections</span></a> New Art</h2>
-        <div class="products_content">
-        
-          <div class="top_gradient clearfix">
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/product/Follow_Me_by_Marc_Wolfe"> <img src="/ProductPhotos/2accf235-97f0-405d-848c-bd6b2e95814f.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/1866?index=Category">Follow Me (<strong>$75.00</strong>)</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/product/Tribute___Military_Edition_by_Marc_Wolfe"> <img src="/ProductPhotos/56d07361-8497-4629-809f-f4f8752b2e73.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/1868?index=Category">Tribute - Military Edition (<strong>$75.00</strong>)</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/product/Tribute___Special_Forces_Edition_by_Marc_Wolfe"> <img src="/ProductPhotos/3871a456-ad3b-4922-8931-7291670c57b5.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/1873?index=Category">Tribute - Special Forces Edition (<strong>$75.00</strong>)</a></h3>
-                
-            </div>
-
-            
-            <div class="row end">&nbsp;</div>
-          </div>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Project name</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <p class="pull-right">Logged in as <a href="#">username</a></p>
         </div>
       </div>
-      
-      <div class="products_box featured">
-        <h2 class="box_title"><a href="/shop"><span>Browse Collections</span></a> Featured Art Categories</h2>
-        <div class="products_content">
-        
-          <div class="top_gradient clearfix">
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/4?index=Category"> <img src="/ProductPhotos/ce1c3070-cd4b-4db8-9ec0-83d50e29b1fd.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/4?index=Category">Americana/Nostalgia</a></h3>
-                
-            </div>
+    </div>
 
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/6?index=Category"> <img src="/ProductPhotos/ad1803fd-3954-4dd9-97c1-3758b2173cc2.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/6?index=Category">Aviation</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/12?index=Category"> <img src="/ProductPhotos/6b5ad86c-4fcb-4f00-ab6f-922150e9871b.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/12?index=Category">Enduring Freedom</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/47?index=Category"> <img src="/ProductPhotos/2cac7d70-31b0-4e71-a455-1e107f9b767b.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/47?index=Category">Iraqi Freedom</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/48?index=Category"> <img src="/ProductPhotos/51577d63-44e7-476d-b7b9-bba4f0d28445.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/48?index=Category">West Point</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/49?index=Category"> <img src="/ProductPhotos/e7acc463-9fed-4e8e-b6ab-f11cb2f84abd.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/49?index=Category">WWII</a></h3>
-                
-            </div>
-
-            
-	        <div class="asinItem">
-            
-                <div class="prodImage"><a href="/shop/Product/Index/72?index=Category"> <img src="/ProductPhotos/43addcde-b2a9-4e21-a67d-2de30dd2c05a.thumb.jpg"></a></div>
-                
-                
-                <h3><a href="/shop/Product/Index/72?index=Category">Military Art</a></h3>
-                
-            </div>
-
-            
-            <div class="row end">&nbsp;</div>
-          </div>
+    <div class="container-fluid">
+      <div class="sidebar">
+        <div class="well">
+          <h5>Sidebar</h5>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+          <h5>Sidebar</h5>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+          <h5>Sidebar</h5>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
         </div>
       </div>
-      
-    <p align="center"><strong>1-800-678-8523</strong></p>
+      <div class="content">
+        <!-- Main hero unit for a primary marketing message or call to action -->
+        @RenderBody();
 
-    
-
-    </div><!--/mainContent-->
-    <div class="right_column">
-      <div class="product_guide">
-        <a href="/cms/Custom_Picture_Framing"><h2 class="box_title"><span>Custom Picture Framing</span></h2></a>
-        <p>We offer museum-archival quality matting and <a href="/cms/Custom_Picture_Framing">custom picture framing</a>.</p>
-      </div>
-      <div class="products_box">
-      <fb:like-box profile_id="109008539135843" width="172" stream="false" colorscheme="dark" class=" fb_iframe_widget "><span><iframe id="f60066654" name="f2477486b4" scrolling="no" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; border-image: initial; overflow-x: hidden; overflow-y: hidden; height: 290px; width: 172px; " class="fb_ltr" src="http://www.facebook.com/plugins/likebox.php?api_key=your%20app%20id&amp;channel=https%3A%2F%2Fs-static.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%3Fversion%3D3%23cb%3Df2d42a5088%26origin%3Dhttp%253A%252F%252Fwww.vladimirarts.com%252Ff3182a4%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;colorscheme=dark&amp;header=true&amp;height=290&amp;id=109008539135843&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=172"></iframe></span></fb:like-box>
-      </div>
-      <div class="store_locator">
-        <h2 class="box_title"><span>Show Locator</span></h2>
-        <p>Check our <a href="/cms/Show_Locator">show locator</a> to find out where our next show will be.</p>
-      </div>
-      
-      <div class="products_box">
-        <h2 class="box_title">Featured Art</h2>
-        <div class="products_content clearfix">
-          
-          
-	        <div class="asinItem">
-            <div class="prodImage"><a href="/product/The_Rock_Returns_by_James_Dietz">
-    
-    <img src="/ProductPhotos/1575886b-7614-44d4-91c9-07c11bb5423b.thumb.jpg">
-    
-
-    </a></div>
-    <h3><a href="/product/The_Rock_Returns_by_James_Dietz">The Rock Returns <strong>($175.00)</strong></a></h3>
-
-            </div>
-
-            
-	        <div class="asinItem">
-            <div class="prodImage"><a href="/product/Talon_Triumph_by_James_Dietz">
-    
-    <img src="/ProductPhotos/ca219174-2726-4b6c-8bf9-a06448da3615.thumb.jpg">
-    
-
-    </a></div>
-    <h3><a href="/product/Talon_Triumph_by_James_Dietz">Talon Triumph <strong>($175.00)</strong></a></h3>
-
-            </div>
-
-            
-	        <div class="asinItem">
-            <div class="prodImage"><a href="/product/Lions_of_Salah_ad_Din_by_James_Dietz">
-    
-    <img src="/ProductPhotos/617e0da4-c8ef-4883-8305-2035d42d8b29.thumb.jpg">
-    
-
-    </a></div>
-    <h3><a href="/product/Lions_of_Salah_ad_Din_by_James_Dietz">Lions of Salah ad Din <strong>($175.00)</strong></a></h3>
-
-            </div>
-
-            
-	        <div class="asinItem">
-            <div class="prodImage"><a href="/product/The_Last_Patrol_by_James_Dietz">
-    
-    <img src="/ProductPhotos/636e5e85-a863-48df-abeb-48565b6fd998.thumb.jpg">
-    
-
-    </a></div>
-    <h3><a href="/product/The_Last_Patrol_by_James_Dietz">The Last Patrol <strong>($175.00)</strong></a></h3>
-
-            </div>
-
-            
-          <div class="row end">&nbsp;</div>
+        <div id="footer">
+          <p>© Company 2011</p>
         </div>
       </div>
-      
     </div>
 
-    
-     
-  </div>
-        <div class="footer">
-  
-    <div>© Copyright 2012 Vladimir Arts USA, Inc. | <a href="mailto:vladimir@vladimirarts.com">vladimir@vladimirarts.com</a> | 1-800-678-8523 | <a href="/cms/Terms___Conditions">Terms &amp; Conditions</a> | <a href="/cms/Privacy_Policy">Privacy Policy</a> | <a href="/cms/Frequently_Asked_Questions">FAQ</a>
-    | <a href="/shop/SiteMap">Site Map</a>
-    </div>
-  </div>
-    </div>
-    <div id="header">
-        <h1><a href="/">ASP.NET MVC MUSIC STORE</a></h1>
-        <ul id="navlist">
-            <li class="first"><a href="@Url.Content("~")" id="current">Home</a></li>
-            <li><a href="@Url.Content("~/Store/")">Store</a></li>
-            <li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
-            <li><a href="@Url.Content("~/StoreManager/")">Admin</a></li>
-        </ul>        
-    </div>
-
-    @{Html.RenderAction("GenreMenu", "Store");}
-
-    <div id="main">
-        @RenderBody()
-    </div>
-
-    <div id="footer">
-        built with <a href="http://asp.net/mvc">ASP.NET MVC 3</a>
-    </div>
 </body>
 </html>

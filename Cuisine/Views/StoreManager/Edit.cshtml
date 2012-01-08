@@ -1,4 +1,4 @@
-﻿@model MvcMusicStore.Models.Album
+﻿@model Cuisine.Models.Product
 
 @{
     ViewBag.Title = "Edit";
@@ -12,32 +12,24 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Album</legend>
+        <legend>Product</legend>
 
-        @Html.HiddenFor(model => model.AlbumId)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.GenreId, "Genre")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("GenreId", String.Empty)
-            @Html.ValidationMessageFor(model => model.GenreId)
-        </div>
+        @Html.HiddenFor(model => model.ProductId)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ArtistId, "Artist")
+            @Html.LabelFor(model => model.CategoryId, "Category")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("ArtistId", String.Empty)
-            @Html.ValidationMessageFor(model => model.ArtistId)
+            @Html.DropDownList("CategoryId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CategoryId)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Title)
+            @Html.LabelFor(model => model.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Title)
-            @Html.ValidationMessageFor(model => model.Title)
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
         </div>
 
         <div class="editor-label">
@@ -49,11 +41,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AlbumArtUrl)
+            @Html.LabelFor(model => model.ProductImageUrl)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.AlbumArtUrl)
-            @Html.ValidationMessageFor(model => model.AlbumArtUrl)
+            @Html.EditorFor(model => model.ProductImageUrl)
+            @Html.ValidationMessageFor(model => model.ProductImageUrl)
         </div>
 
         <p>

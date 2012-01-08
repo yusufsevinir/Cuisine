@@ -1,23 +1,19 @@
-﻿@model MvcMusicStore.Models.Album
+﻿@model Cuisine.Models.Product
 
 @{
-    ViewBag.Title = "Album - " + Model.Title;
+    ViewBag.Title = "Product - " + Model.Name;
 }
 
-<h2>@Model.Title</h2>
+<h2>@Model.Name</h2>
 
 <p>
-    <img alt="@Model.Title" src="@Model.AlbumArtUrl" />
+    <img alt="@Model.Name" src="@Model.ProductImageUrl" />
 </p>
 
 <div id="album-details">
     <p>
-        <em>Genre:</em>
-        @Model.Genre.Name
-    </p>
-    <p>
-        <em>Artist:</em>
-        @Model.Artist.Name
+        <em>Category:</em>
+        @Model.Category.Name
     </p>
     <p>
         <em>Price:</em>
@@ -25,6 +21,6 @@
     </p>
     <p class="button">
         @Html.ActionLink("Add to cart", "AddToCart", 
-        "ShoppingCart", new { id = Model.AlbumId }, "")
+        "ShoppingCart", new { id = Model.ProductId }, "")
     </p>
 </div>

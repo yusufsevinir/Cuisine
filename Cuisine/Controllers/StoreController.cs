@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
+using Cuisine.Models;
 
-namespace MvcMusicStore.Controllers
+namespace Cuisine.Controllers
 {
     public class StoreController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        CuisineEntities storeDB = new CuisineEntities();
 
         //
         // GET: /Store/
 
         public ActionResult Index()
         {
-            var genres = storeDB.Genres.ToList();
+            var genres = storeDB.Categories.ToList();
 
             return View(genres);
         }
@@ -26,8 +26,8 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Browse(string genre)
         {
-            // Retrieve Genre and its Associated Albums from database
-            var genreModel = storeDB.Genres.Include("Albums")
+            // Retrieve Category and its Associated Products from database
+            var genreModel = storeDB.Categories.Include("Products")
                 .Single(g => g.Name == genre);
 
             return View(genreModel);
@@ -38,7 +38,7 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Details(int id)
         {
-            var album = storeDB.Albums.Find(id);
+            var album = storeDB.Products.Find(id);
 
             return View(album);
         }
@@ -47,9 +47,9 @@ namespace MvcMusicStore.Controllers
         // GET: /Store/GenreMenu
 
         [ChildActionOnly]
-        public ActionResult GenreMenu()
+        public ActionResult CategoryMenu()
         {
-            var genres = storeDB.Genres.ToList();
+            var genres = storeDB.Categories.ToList();
 
             return PartialView(genres);
         }

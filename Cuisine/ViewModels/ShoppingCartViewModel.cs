@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using MvcMusicStore.Models;
+using Cuisine.Models;
 
-namespace MvcMusicStore.ViewModels
+namespace Cuisine.ViewModels
 {
     public class ShoppingCartViewModel
     {

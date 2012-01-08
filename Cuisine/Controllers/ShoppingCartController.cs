@@ -1,13 +1,13 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
-using MvcMusicStore.ViewModels;
+using Cuisine.Models;
+using Cuisine.ViewModels;
 
-namespace MvcMusicStore.Controllers
+namespace Cuisine.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        CuisineEntities storeDB = new CuisineEntities();
 
         //
         // GET: /ShoppingCart/
@@ -33,9 +33,9 @@ namespace MvcMusicStore.Controllers
         public ActionResult AddToCart(int id)
         {
 
-            // Retrieve the album from the database
-            var addedAlbum = storeDB.Albums
-                .Single(album => album.AlbumId == id);
+            // Retrieve the Product from the database
+            var addedAlbum = storeDB.Products
+                .Single(album => album.ProductId == id);
 
             // Add it to the shopping cart
             var cart = ShoppingCart.GetCart(this.HttpContext);
@@ -55,9 +55,9 @@ namespace MvcMusicStore.Controllers
             // Remove the item from the cart
             var cart = ShoppingCart.GetCart(this.HttpContext);
 
-            // Get the name of the album to display confirmation
+            // Get the name of the Product to display confirmation
             string albumName = storeDB.Carts
-                .Single(item => item.RecordId == id).Album.Title;
+                .Single(item => item.RecordId == id).Product.Name;
 
             // Remove from cart
             int itemCount = cart.RemoveFromCart(id);

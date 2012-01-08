@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Linq;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
+using Cuisine.Models;
 
-namespace MvcMusicStore.Controllers
+namespace Cuisine.Controllers
 {
     [Authorize]
     public class CheckoutController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        CuisineEntities storeDB = new CuisineEntities();
         const string PromoCode = "FREE";
 
         //

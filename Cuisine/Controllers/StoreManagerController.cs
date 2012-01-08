@@ -5,21 +5,21 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
+using Cuisine.Models;
 
-namespace MvcMusicStore.Controllers
+namespace Cuisine.Controllers
 {
     [Authorize(Roles = "Administrator")]
     public class StoreManagerController : Controller
     {
-        private MusicStoreEntities db = new MusicStoreEntities();
+        private CuisineEntities db = new CuisineEntities();
 
         //
         // GET: /StoreManager/
 
         public ViewResult Index()
         {
-            var albums = db.Albums.Include(a => a.Genre).Include(a => a.Artist);
+            var albums = db.Products.Include(a => a.Category);
             return View(albums.ToList());
         }
 
@@ -28,8 +28,8 @@ namespace MvcMusicStore.Controllers
 
         public ViewResult Details(int id)
         {
-            Album album = db.Albums.Find(id);
-            return View(album);
+            Product product = db.Products.Find(id);
+            return View(product);
         }
 
         //
@@ -37,8 +37,7 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name");
-            ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
+            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name");
             return View();
         } 
 
@@ -46,18 +45,17 @@ namespace MvcMusicStore.Controllers
         // POST: /StoreManager/Create
 
         [HttpPost]
-        public ActionResult Create(Album album)
+        public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Albums.Add(album);
+                db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
-            ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
-            return View(album);
+            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name", product.CategoryId);
+            return View(product);
         }
         
         //
@@ -65,27 +63,25 @@ namespace MvcMusicStore.Controllers
  
         public ActionResult Edit(int id)
         {
-            Album album = db.Albums.Find(id);
-            ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
-            ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
-            return View(album);
+            Product product = db.Products.Find(id);
+            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name", product.CategoryId);
+            return View(product);
         }
 
         //
         // POST: /StoreManager/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Album album)
+        public ActionResult Edit(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(album).State = EntityState.Modified;
+                db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
-            ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
-            return View(album);
+            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name", product.CategoryId);
+            return View(product);
         }
 
         //
@@ -93,8 +89,8 @@ namespace MvcMusicStore.Controllers
  
         public ActionResult Delete(int id)
         {
-            Album album = db.Albums.Find(id);
-            return View(album);
+            Product product = db.Products.Find(id);
+            return View(product);
         }
 
         //
@@ -103,8 +99,8 @@ namespace MvcMusicStore.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            Album album = db.Albums.Find(id);
-            db.Albums.Remove(album);
+            Product product = db.Products.Find(id);
+            db.Products.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

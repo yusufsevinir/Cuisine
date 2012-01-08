@@ -1,4 +1,4 @@
-﻿namespace MvcMusicStore.ViewModels
+﻿namespace Cuisine.ViewModels
 {
     public class ShoppingCartRemoveViewModel
     {

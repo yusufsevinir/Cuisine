@@ -1,4 +1,4 @@
-﻿@model MvcMusicStore.Models.Album
+﻿@model Cuisine.Models.Product
 
 @{
     ViewBag.Title = "Details";
@@ -7,21 +7,16 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Album</legend>
+    <legend>Product</legend>
 
-    <div class="display-label">Genre</div>
+    <div class="display-label">Category</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Genre.Name)
-    </div>
-
-    <div class="display-label">Artist</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Artist.Name)
+        @Html.DisplayFor(model => model.Category.Name)
     </div>
 
     <div class="display-label">Title</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Title)
+        @Html.DisplayFor(model => model.Name)
     </div>
 
     <div class="display-label">Price</div>
@@ -29,12 +24,12 @@
         @Html.DisplayFor(model => model.Price)
     </div>
 
-    <div class="display-label">AlbumArtUrl</div>
+    <div class="display-label">ProductArtUrl</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.AlbumArtUrl)
+        @Html.DisplayFor(model => model.ProductImageUrl)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.AlbumId }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using Mvc3ToolsUpdateWeb_Default.Models;
-using MvcMusicStore.Models;
+using Cuisine.Models;
 
 namespace Mvc3ToolsUpdateWeb_Default.Controllers
 {

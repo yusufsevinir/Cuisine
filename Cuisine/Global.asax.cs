@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Cuisine.Models;
 
-namespace MvcMusicStore
+namespace Cuisine
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
@@ -31,7 +32,7 @@ namespace MvcMusicStore
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new MvcMusicStore.Models.SampleData());
+            System.Data.Entity.Database.SetInitializer(new SampleData());
 
             AreaRegistration.RegisterAllAreas();
 

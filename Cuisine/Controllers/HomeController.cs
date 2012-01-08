@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
+using Cuisine.Models;
 
-namespace MvcMusicStore.Controllers
+namespace Cuisine.Controllers
 {
     public class HomeController : Controller
     {
         //
         // GET: /Home/
 
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        CuisineEntities storeDB = new CuisineEntities();
 
         public ActionResult Index()
         {
@@ -20,12 +20,12 @@ namespace MvcMusicStore.Controllers
             return View(albums);
         }
 
-        private List<Album> GetTopSellingAlbums(int count)
+        private List<Product> GetTopSellingAlbums(int count)
         {
-            // Group the order details by album and return
+            // Group the order details by Product and return
             // the albums with the highest count
 
-            return storeDB.Albums
+            return storeDB.Products
                 .OrderByDescending(a => a.OrderDetails.Count())
                 .Take(count)
                 .ToList();
