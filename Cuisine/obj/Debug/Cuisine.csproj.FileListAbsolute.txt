@@ -26,3 +26,10 @@ C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\bin\EntityFramework
 C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\obj\Debug\Cuisine.dll
 C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\obj\Debug\Cuisine.pdb
+C:\Users\neccar\Cuisine\Cuisine\bin\Cuisine.dll
+C:\Users\neccar\Cuisine\Cuisine\bin\Cuisine.pdb
+C:\Users\neccar\Cuisine\Cuisine\bin\EntityFramework.dll
+C:\Users\neccar\Cuisine\Cuisine\bin\EntityFramework.xml
+C:\Users\neccar\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\neccar\Cuisine\Cuisine\obj\Debug\Cuisine.dll
+C:\Users\neccar\Cuisine\Cuisine\obj\Debug\Cuisine.pdb

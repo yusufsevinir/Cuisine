@@ -5,7 +5,7 @@
     {
         <li>@Html.ActionLink(category.Name, 
                 "Browse", "Store",
-                 new { Genre = category.Name }, null)
+                 new { category = category.Name }, null)
         </li>
     }
 </ul>

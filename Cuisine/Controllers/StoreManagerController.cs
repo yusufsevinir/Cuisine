@@ -37,7 +37,7 @@ namespace Cuisine.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name");
+            ViewBag.CategoryId = new SelectList(db.Categories,"CategoryId", "Name");
             return View();
         } 
 
@@ -54,7 +54,7 @@ namespace Cuisine.Controllers
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name", product.CategoryId);
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
         
@@ -64,7 +64,7 @@ namespace Cuisine.Controllers
         public ActionResult Edit(int id)
         {
             Product product = db.Products.Find(id);
-            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name", product.CategoryId);
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
 
@@ -80,7 +80,7 @@ namespace Cuisine.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.GenreId = new SelectList(db.Categories, "GenreId", "Name", product.CategoryId);
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
 
