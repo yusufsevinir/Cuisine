@@ -87,11 +87,18 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\background.jpg" />
+    <Content Include="Content\Images\background.png" />
+    <Content Include="Content\Images\header.png" />
     <Content Include="Content\Images\home-showcase.png" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\navleft.png" />
     <Content Include="Content\Images\placeholder.gif" />
     <Content Include="Content\Images\placeholder.jpg" />
+    <Content Include="Content\Images\southbridgelogo.png" />
+    <Content Include="Content\Images\topnav.png" />
     <Content Include="Content\site.css" />
+    <Content Include="Content\template.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -119,6 +126,15 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Design\cebgray\images\background.jpg" />
+    <Content Include="Design\cebgray\images\header.png" />
+    <Content Include="Design\cebgray\images\logo.png" />
+    <Content Include="Design\cebgray\images\navleft.png" />
+    <Content Include="Design\cebgray\images\topnav.png" />
+    <Content Include="Design\cebgray\index.html" />
+    <Content Include="Design\cebgray\license.txt" />
+    <Content Include="Design\cebgray\screenshot.png" />
+    <Content Include="Design\cebgray\template.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
@@ -205,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Store\CategoryMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Design\cebgray\images\header.psd" />
+    <None Include="Design\cebgray\images\logo.psd" />
+    <None Include="Design\cebgray\images\navleft.psd" />
+    <None Include="Design\cebgray\images\topnav.psd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
