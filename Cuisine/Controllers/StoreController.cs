@@ -16,21 +16,21 @@ namespace Cuisine.Controllers
 
         public ActionResult Index()
         {
-            var genres = storeDB.Categories.ToList();
-
-            return View(genres);
+            var categories = storeDB.Categories.ToList();
+            return View(categories);
         }
 
         //
         // GET: /Store/Browse?genre=Disco
 
-        public ActionResult Browse(string genre)
+        public ActionResult Browse(string category)
         {
+            var categoryModel = storeDB.Categories.Include("Products").SingleOrDefault(c => c.Name == category);
             // Retrieve Category and its Associated Products from database
-            var genreModel = storeDB.Categories.Include("Products")
-                .Single(g => g.Name == genre);
+            //var genreModel = storeDB.Categories.Include("Products")
+            //    .Single(g => g.Name == genre);
 
-            return View(genreModel);
+            return View(categoryModel);
         }
 
         //
@@ -49,9 +49,9 @@ namespace Cuisine.Controllers
         [ChildActionOnly]
         public ActionResult CategoryMenu()
         {
-            var genres = storeDB.Categories.ToList();
+            var categories = storeDB.Categories.ToList();
 
-            return PartialView(genres);
+            return PartialView(categories);
         }
 
     }
