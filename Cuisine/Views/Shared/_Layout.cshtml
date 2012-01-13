@@ -4,8 +4,11 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" 
         type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" 
-        type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Cuisine/Cuisine.js")" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.5.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.11.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
     <style type="text/css">
       body {
         padding-top: 100px;
@@ -30,33 +33,13 @@
 
     <div class="container-fluid">
       <div class="sidebar">
-        <div class="well">
-          <h5>Sidebar</h5>
-          <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-          <h5>Sidebar</h5>
-          <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-          <h5>Sidebar</h5>
-          <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
+        <div id="sidebar" class="well">
+            
         </div>
       </div>
       <div class="content">
         <!-- Main hero unit for a primary marketing message or call to action -->
-        @RenderBody();
+        @RenderBody()
 
         <div id="footer">
           <p>© Company 2011</p>

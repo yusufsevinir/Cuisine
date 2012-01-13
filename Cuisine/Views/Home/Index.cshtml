@@ -2,8 +2,13 @@
 @{
     ViewBag.Title = "ASP.NET MVC Music Store";
 }
-<div id="promotion">
-</div>
+
+<script type="text/javascript">
+    $(function () {
+        ViewCategory();
+    });
+
+</script>
 
 <div class="hero-unit">
           <h1>Hello, world!</h1>
@@ -12,7 +17,7 @@
         </div>
 
         <!-- Example row of columns -->
-        <div class="row">
+<div class="row">
                 @foreach (var album in Model)
                 {
                     <div class="span5">
@@ -28,4 +33,4 @@
 
 <h3><em>Fresh</em> off the grill</h3>
 
-
+</div>
