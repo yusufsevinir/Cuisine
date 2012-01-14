@@ -18,6 +18,9 @@ namespace Cuisine.Models
         [StringLength(160)]
         public string Name { get; set; }
 
+        [StringLength(160)]
+        public string Description { get; set; }
+
         [Required(ErrorMessage = "Price is required")]
         [Range(0.01, 100.00,
             ErrorMessage = "Price must be between 0.01 and 100.00")]
@@ -27,7 +30,7 @@ namespace Cuisine.Models
         [StringLength(1024)]
         public string ProductImageUrl { get; set; }
 
-        public ProductSize Size { get; set; }
+        public byte Size { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }
