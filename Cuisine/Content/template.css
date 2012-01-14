@@ -136,7 +136,7 @@ background-repeat:no-repeat;
 #inheader {
 padding:0px 10px 0px 10px;
 background-color:white;
-float:right;
+float:left;
 margin-top:80px;
 
 }
@@ -176,10 +176,9 @@ margin-top:20px;
 
 
 #content {
-width:550px;
+width:780px;
 float:left;
 margin-top:20px;
-    margin-left: 20px;
 }
 
 .pcontent {

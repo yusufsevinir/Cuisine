@@ -221,7 +221,7 @@ body {
 .container-fluid > .sidebar {
   position: absolute;
   top: 0;
-  left: 20px;
+  left: 40px;
   width: 220px;
 }
 .container-fluid > .content {
