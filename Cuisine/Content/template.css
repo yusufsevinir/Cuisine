@@ -177,8 +177,9 @@ margin-top:20px;
 
 #content {
 width:550px;
-float:right;
+float:left;
 margin-top:20px;
+    margin-left: 20px;
 }
 
 .pcontent {

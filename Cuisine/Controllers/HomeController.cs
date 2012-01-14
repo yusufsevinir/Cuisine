@@ -30,5 +30,10 @@ namespace Cuisine.Controllers
                 .Take(count)
                 .ToList();
         }
+
+        public ActionResult Contact()
+        {
+            return View("Contact");
+        }
     }
 }

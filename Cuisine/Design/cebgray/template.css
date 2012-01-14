@@ -178,7 +178,8 @@ margin-top:20px;
 
 
 #content {
-width:550px;
+width:800px;
+    min-height: 600px;
 float:right;
 margin-top:20px;
 }
