@@ -11,7 +11,8 @@
 }
 
 function ViewProduct(categoryId) {
-       window.location="/Product/ListByCategory/"+categoryId;
+    window.location = "/Product/ListByCategory/" + categoryId;
+    
 }
 
 function UpdateBasket(ProductId) {
@@ -19,7 +20,7 @@ function UpdateBasket(ProductId) {
         type: "post",
         url: "/Order/AddToCart?ProductId=" + ProductId,
         success: function (html) {
-            $("#ProductOrderDiv").html(html);
+            $("#divShoppingCard").html(html);
         }
     });
 }

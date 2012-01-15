@@ -16,43 +16,51 @@ namespace Cuisine.Controllers
 
         public ActionResult Index()
         {
-            ProductOrderViewModel viewModel = new ProductOrderViewModel();
-            viewModel.Product = context.Products.ToList<Product>();
-            viewModel.Category = context.Categories.ToList<Category>();
-            Session["ProductOrderViewModel"] = viewModel;
+            var viewModel = (ProductOrderViewModel)Session["ProductOrderViewModel"];
+            if (viewModel == null)
+            {
+                viewModel = new ProductOrderViewModel
+                                {
+                                    Product = context.Products.ToList<Product>(),
+                                    Category = context.Categories.ToList<Category>()
+                                };
+                Session["ProductOrderViewModel"] = viewModel;
+            }
             return View(viewModel);
         }
 
         public ActionResult AddToCart(int productId)
         {
-            ProductOrderViewModel viewModel = (ProductOrderViewModel) Session["ProductOrderViewModel"];
-            if (viewModel.CartItems.Count > 0)
+            var viewModel = (ProductOrderViewModel)Session["ProductOrderViewModel"];
+            var newCart = new Cart();
+            bool exist = false;
+            
+            foreach (Cart cart in viewModel.CartItems)
             {
-                foreach (Cart cart in viewModel.CartItems)
+                if (cart.ProductId == productId)
                 {
-                    if (cart.ProductId == productId)
-                    {
-                        cart.Count++;
-                        viewModel.CartTotal += cart.Product.Price;
-                    }
-                    
-                }
+                    cart.Count++;
+                    viewModel.CartTotal += cart.Product.Price;
+                    exist = true;
+                }                    
             }
-            else
+            if (!exist)
             {
-                Cart cart = new Cart();
-                cart.CartId = Guid.NewGuid().ToString();
-                cart.Product = context.Products.FirstOrDefault(p => p.ProductId == productId);
-                cart.ProductId = productId;
-                cart.DateCreated = DateTime.UtcNow;
-                cart.Count = 1;
-                viewModel.CartItems.Add(cart);
-                viewModel.CartTotal += cart.Product.Price;
+                newCart.CartId = Guid.NewGuid().ToString();
+                newCart.Product = context.Products.FirstOrDefault(p => p.ProductId == productId);
+                newCart.ProductId = productId;
+                newCart.DateCreated = DateTime.UtcNow;
+                newCart.Count = 1;
+                viewModel.CartTotal += newCart.Product.Price;
+                viewModel.CartItems.Add(newCart);
             }
-            //Cart cart = new Cart();
-            //cart.
-            //viewModel.CartItems.Add(
-            return View("Index",viewModel);
+            Session["ProductOrderViewModel"] = viewModel;
+            return View("ShoppingCart",viewModel);
+        }
+
+        public ActionResult ViewBasket()
+        {            
+            return View("ShoppingCart", (ProductOrderViewModel)Session["ProductOrderViewModel"]);
         }
     }
 }

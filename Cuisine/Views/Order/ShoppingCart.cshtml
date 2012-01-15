@@ -1,0 +1,42 @@
+﻿@model Cuisine.ViewModels.ProductOrderViewModel
+@{
+    Layout = "";
+}
+<div class="orderContents">
+                <table class="basketText">
+		            <tbody>
+                        @foreach (var cart in Model.CartItems)
+                        {
+                            <tr>
+			                    <td colspan="3" class="boldPrice"><strong>@cart.Product.Name</strong></td>
+		                    </tr>
+		                    <tr>
+			                    <td style="padding-bottom:3px;" class="csSubCell1"><div>@cart.Count</div></td>
+			                    <td class="csSubCell2"><div style="font-weight:bold;">
+                                    <div style="float: right;">@cart.Product.Price</div>
+                                    <div style="float: right;">£</div><div style="clear:both"></div></div></td>
+			                    <td class="minusCls csSubCell3"><input type="image" src="../../Content/Images/button-minus.gif"
+                                    onclick="deletefrombasket(@cart.ProductId);" style="border-width:0px;"/></td>
+		                    </tr>
+                        }
+		                <tr class="orderTotal borderTop">
+			                <td class="csSubCell1"><strong>Subtotal:</strong></td>
+			                <td class="csSubCell2"><div style="font-weight:bold;">
+                                <div style="float: right;">@Model.CartTotal</div>
+                                <div style="float: right;">£</div><div style="clear:both"></div></div></td>
+			                <td class="csSubCell3"></td>
+		                </tr>
+		                <tr>
+			                <td colspan="3"><div class="minimumOrder"><p><strong>You need to spend £11 or more to order</strong></p></div></td>
+		                </tr>
+		                <tr align="left">
+			                <td colspan="3" style="padding-top:15px;">
+                            <img src="/images/button/green-button-left.png" style=" vertical-align: top;" alt="">
+                            <input type="submit" name="ctl00$DesktopSideColumn$Basket$lnkProceed" value="ORDER NOW &gt;&gt;" 
+                            onclick="alert('Add items to your order by choosing from the menu.');document.location.href='https://www.just-eat.co.uk/order-details';return false;" 
+                            class="csbtnImagegreen">
+                            <img src="/images/button/green-button-right.png" style="vertical-align: top;" alt=""></td>
+		                </tr>
+	                </tbody>
+                </table>
+	        </div>

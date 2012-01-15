@@ -1,78 +1,46 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>@ViewBag.Title</title>
-        <link href="@Url.Content("~/Content/template.css")" rel="stylesheet" 
-              type="text/css" />
-        <script src="../../Scripts/Cuisine/Cuisine.js" type="text/javascript"></script>
-        <script src="../../Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
-        <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" 
-                type="text/javascript"></script>
-        <style type="text/css">
-            body {
-                padding-top: 100px;
-            }
-        </style>
-    </head>
-    <body>
-    <div id="template">
-		<div id="main">
-			<div id="logo">
-			<img src="../../Content/Images/southbridgelogo.png" alt="Logo"/>
-			</div>
-			<div id="slogan">
-			&nbsp;&nbsp;&nbsp; Authentic charcoal grill - Halal</div>
-			<div style="clear:both;"></div>
-			<div id="topnavi">
-			<div id="navwidth">
-				<ul id="navi">
-					<li class="active"><a href="/">Home</a></li>
-					<li><a href="/">Order Online</a></li>
-					<li><a href="/">Contact us</a></li>
-					<li><a href="/">About Us</a></li>
-				</ul>
-				</div>				
-			</div>
-		<div style="clear:both;"></div>
-		<br/>
-		@*<div id="header">
-		<div id="inheader"><h1>South Bridge Charcoal Grill</h1></div>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Earlyish business by http://Templatesperfect.com -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+    <script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/Cuisine/Cuisine.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../Content/styles.css" media="screen" />
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<div id="content">
+		<p id="top">Contact us now <span class="phone">020 8681 1566</span> <a href="#"> <img src= "../../Content/Images/fb.gif" alt="" />  </a>
+<a href="#"> <img src="../../Content/Images/mail.gif" alt="" /></a>
+  </p>
+		<div id="logo">
+            <h1><a href="Home">
+                    <img src="../../Content/Images/logo.jpg" alt="Earlyish" />
+                </a>
+                </h1>
+		</div>
+		<ul id="menu">
+			<li id="liHome">@Html.ActionLink("Home","Index","Home")</li>
+			<li id="liOrder">@Html.ActionLink("Order Online","Index","Order")</li>
+            <li id="liContact">@Html.ActionLink("Contact Us","Contact","Home") </li>			
+		</ul>
+		<div class="line"></div>
+        <div class="line"></div>
+        <div class="content">
+                @RenderBody()		
+		@*<div class="right">
+        
+			<p><img src="../../Content/Images/business1.jpg" width="160" height="110" alt="Alt text to go here" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor.  ac..<a href="#">Learn more</a></p>
+			<br />
+			<p><img src="../../Content/Images/business2.jpg" width="160" height="110" alt="Alt text to go here" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. ..<a href="#">Learn more</a> </p>
 		</div>*@
-            <div id="content">
-                @RenderBody()
-    @*            <h2>Dolor Sit</h2>
-                <p class="pcontent">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                    <span class="readmore"><a href="/">Read more...</a></span>  
-                </p>
-                <h2>Exerci Tation</h2>
-                <p class="pcontent">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
-                    <span class="readmore"><a href="http://www.bonsaimai.de">Read more...</a></span>
-                </p>
-                <h2>Vel Illum</h2>
-                <p class="pcontent">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-                    <span class="readmore"><a href="http://www.http://www.ceb-seo.de/online-marketing-agentur.html">Read more...</a></span>	
-                </p>		*@
             </div>
-			<div style="clear:both;"></div>
-			<div id="contentbottom">
-				<div id="contentbottomleft">
-					<h2>Test</h2>
-						<p>Paragraph</p>
-				</div>
-				<div id="contentbottomright">
-				
-				<h2>Right</h2>
-						<p>Paragraph </p>
-				</div>
-				<div style="clear:both"></div>
-			</div>
-			<div id="footer">
-	        </div>
-<div id="end"></div>
-</div>
-</div>
+            <div class="line"></div>
+		<div id="footer">
+			<p class="right">&copy; 2011 - South Bridge Charcoal Grill &nbsp;</p>
+		</div>	
+	</div>
 </body>
 </html>
-
 

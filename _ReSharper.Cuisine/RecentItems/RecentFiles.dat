@@ -1,59 +1,16 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Web.config" caret="84" fromTop="2" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:CheckoutController.cs" caret="303" fromTop="13" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:AccountController.cs" caret="3430" fromTop="13" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:ShoppingCartController.cs" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:StoreController.cs" caret="1421" fromTop="23" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/f:Web.config" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Web.Release.config" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Web.Debug.config" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:site.css" caret="3894" fromTop="11" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:StoreManagerController.cs" caret="2276" fromTop="34" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:CuisineEntities.cs" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:Category.cs" caret="183" fromTop="7" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:ViewModels/f:ShoppingCartRemoveViewModel.cs" caret="318" fromTop="10" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:template.css" caret="41" fromTop="3" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:Product.cs" caret="616" fromTop="21" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:HomeController.cs" caret="882" fromTop="33" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="5141" fromTop="27" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Store/f:CategoryMenu.cshtml" caret="281" fromTop="10" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Store/f:Browse.cshtml" caret="101" fromTop="6" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Contact.cshtml" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:ShoppingCart/f:Index.cshtml" caret="3044" fromTop="63" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1214" fromTop="21" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:ProductController.cs" caret="622" fromTop="26" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:template.css" caret="17" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="660" fromTop="18" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="3996" fromTop="4" />
   </RecentFiles>
   <RecentEdits>
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="3878" fromTop="9" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="3510" fromTop="4" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="1335" fromTop="4" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="1940" fromTop="9" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="1092" fromTop="8" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:index.html" caret="908" fromTop="13" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1716" fromTop="34" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="443" fromTop="14" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1716" fromTop="33" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1703" fromTop="10" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="132" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1716" fromTop="4" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="455" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1707" fromTop="34" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1268" fromTop="10" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="96" fromTop="2" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="1021" fromTop="24" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="513" fromTop="12" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="133" fromTop="6" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="574" fromTop="18" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:template.css" caret="281" fromTop="15" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:template.css" caret="915" fromTop="16" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:template.css" caret="113" fromTop="7" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:HomeController.cs" caret="920" fromTop="33" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:HomeController.cs" caret="833" fromTop="31" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1010" fromTop="17" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1511" fromTop="18" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1356" fromTop="18" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="944" fromTop="4" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="1203" fromTop="21" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:template.css" caret="1750" fromTop="8" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:template.css" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:template.css" caret="68" fromTop="5" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="538" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="4949" fromTop="21" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="3996" fromTop="4" />
   </RecentEdits>
 </RecentFiles>

@@ -65,7 +65,8 @@ cart => cart.CartId == ShoppingCartId
 
             if (cartItem != null)
             {
-                if (cartItem.Count > 1)
+                //todo control
+                if (cartItem.RecordId > 1)
                 {
                     cartItem.Count--;
                     itemCount = cartItem.Count;
