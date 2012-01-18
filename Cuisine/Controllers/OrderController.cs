@@ -58,9 +58,73 @@ namespace Cuisine.Controllers
             return View("ShoppingCart",viewModel);
         }
 
+        public ActionResult RemoveFromCart(int productId)
+        {
+            var viewModel = (ProductOrderViewModel)Session["ProductOrderViewModel"];
+
+            foreach (Cart cart in viewModel.CartItems)
+            {
+                if (cart.ProductId == productId)
+                {
+                    viewModel.CartTotal -= cart.Product.Price*cart.Count;
+                    viewModel.CartItems.Remove(cart);
+                    break;
+                }
+            }
+            
+            Session["ProductOrderViewModel"] = viewModel;
+            return View("ShoppingCart", viewModel);
+        }
+        
+        public ActionResult GetOrderDetails()
+        {
+            return View("Order");
+        }
+
         public ActionResult ViewBasket()
         {            
             return View("ShoppingCart", (ProductOrderViewModel)Session["ProductOrderViewModel"]);
+        }
+
+        public ActionResult Order(Order model)
+        {
+            try
+            { 
+                Order order = new Order();
+                order.OrderId = Guid.NewGuid();
+                order.FirstName = model.FirstName.Trim();
+                order.LastName = model.LastName.Trim();
+                order.OrderDate = DateTime.UtcNow;
+                order.Phone = model.Phone;
+                order.PostalCode = model.PostalCode;
+                order.Address = model.Address;
+                order.Email = model.Email;
+                order.OrderDetails = new List<OrderDetail>();
+                
+                ProductOrderViewModel viewData = (ProductOrderViewModel) Session["ProductOrderViewModel"];
+                order.Total = model.Total;
+                foreach(var cart in viewData.CartItems)
+                {
+                    OrderDetail orderDetail = new OrderDetail();
+                    orderDetail.OrderDetailId = Guid.NewGuid();
+                    orderDetail.OrderId = order.OrderId;
+                    orderDetail.ProductId = cart.ProductId;
+                    orderDetail.Quantity = cart.Count;
+                    orderDetail.UnitPrice = cart.Product.Price;
+                    orderDetail.Product = cart.Product;
+                    orderDetail.Order = order;
+                    order.OrderDetails.Add(orderDetail);
+                }
+
+
+                context.SaveChanges();
+                Session["ProductOrderViewModel"] = null;
+                return RedirectToAction("Index", "Home");
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
     }
 }

@@ -146,6 +146,34 @@ font-style:italic;
 	
 }
 
+.display-label,
+.editor-label
+{
+    margin: 1em 0 0 0;
+}
+
+.display-field,
+.editor-field
+{
+    display: inline-block;
+    margin:0.5em 0 0 0;
+}
+
+.text-box
+{
+    width: 240px;
+}
+
+.text-box.multi-line
+{
+    width: 240px;
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
 
 	#footer { text-align:right;clear: both; font-size: .84em; padding-top: 20px; }
 	#footer  img{border:none; float:right; margin:0; padding:0;}

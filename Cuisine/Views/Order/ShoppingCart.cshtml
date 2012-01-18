@@ -3,7 +3,7 @@
     Layout = "";
 }
 <div class="orderContents">
-                <table class="basketText">
+    <table class="basketText">
 		            <tbody>
                         @foreach (var cart in Model.CartItems)
                         {
@@ -16,7 +16,7 @@
                                     <div style="float: right;">@cart.Product.Price</div>
                                     <div style="float: right;">£</div><div style="clear:both"></div></div></td>
 			                    <td class="minusCls csSubCell3"><input type="image" src="../../Content/Images/button-minus.gif"
-                                    onclick="deletefrombasket(@cart.ProductId);" style="border-width:0px;"/></td>
+                                    onclick="DeleteFromBasket(@cart.ProductId);" style="border-width:0px;"/></td>
 		                    </tr>
                         }
 		                <tr class="orderTotal borderTop">
@@ -31,12 +31,16 @@
 		                </tr>
 		                <tr align="left">
 			                <td colspan="3" style="padding-top:15px;">
-                            <img src="/images/button/green-button-left.png" style=" vertical-align: top;" alt="">
-                            <input type="submit" name="ctl00$DesktopSideColumn$Basket$lnkProceed" value="ORDER NOW &gt;&gt;" 
-                            onclick="alert('Add items to your order by choosing from the menu.');document.location.href='https://www.just-eat.co.uk/order-details';return false;" 
+                            
+                            <input type="submit" value="Order Now" 
+                            onclick="OrderCuisine();" 
                             class="csbtnImagegreen">
-                            <img src="/images/button/green-button-right.png" style="vertical-align: top;" alt=""></td>
+                            </td>
 		                </tr>
 	                </tbody>
                 </table>
-	        </div>
+                <div id="GetDetailsDiv" class="basketText">
+                
+                </div>
+
+</div>

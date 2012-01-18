@@ -67,7 +67,7 @@ namespace Cuisine.Controllers
         {
             // Validate customer owns this order
             bool isValid = storeDB.Orders.Any(
-                o => o.OrderId == id &&
+                o => o.OrderId.ToString() == id.ToString() &&
                 o.Username == User.Identity.Name);
 
             if (isValid)

@@ -157,7 +157,7 @@ cart => cart.CartId == ShoppingCartId
             EmptyCart();
 
             // Return the OrderId as the confirmation number
-            return order.OrderId;
+            return Convert.ToInt32(order.OrderId);
         }
 
         // We're using HttpContextBase to allow access to cookies.
