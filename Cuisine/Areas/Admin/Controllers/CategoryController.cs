@@ -9,6 +9,7 @@ using Cuisine.Models;
 
 namespace Cuisine.Areas.Admin.Controllers
 { 
+    [Authorize(Roles = "Administrator")]
     public class CategoryController : Controller
     {
         private CuisineEntities db = new CuisineEntities();

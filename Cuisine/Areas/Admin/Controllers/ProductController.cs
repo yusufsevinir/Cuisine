@@ -8,7 +8,8 @@ using System.Web.Mvc;
 using Cuisine.Models;
 
 namespace Cuisine.Areas.Admin.Controllers
-{ 
+{
+    [Authorize(Roles = "Administrator")]
     public class ProductController : Controller
     {
         private CuisineEntities db = new CuisineEntities();

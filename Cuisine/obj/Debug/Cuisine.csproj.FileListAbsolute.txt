@@ -40,3 +40,4 @@ C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\EntityFramework.xml
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.dll
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\System.Web.Providers.dll

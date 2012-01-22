@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Cuisine.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class OrderController : Controller
     {
         //
