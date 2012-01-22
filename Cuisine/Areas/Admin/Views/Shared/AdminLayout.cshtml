@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Earlyish business by http://Templatesperfect.com -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+    <script src="../../../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Cuisine/Cuisine.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/jquery.blockUI.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../../../Content/styles.css" media="screen" />
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<div id="content">
+		<p id="top">Contact us now <span class="phone">020 8681 1566</span> <a href="#"> <img src= "../../../../Content/Images/fb.gif" alt="" />  </a>
+<a href="#"> <img src="../../../../Content/Images/mail.gif" alt="" /></a>
+  </p>
+		<div id="logo">
+            <h1><a href="/Admin">
+                    @*<img src="../../../../Content/Images/logo.jpg" alt="Earlyish" />*@
+                </a>
+                </h1>
+		</div>
+        <ul id="menu">
+            <li id="liContact">@Html.ActionLink("Orders","Index","Order") </li>			            
+            <li id="liHome">@Html.ActionLink("Categories","Index","Category")</li>
+            <li id="liOrder">@Html.ActionLink("Products","Index","Product")</li>
+        </ul>
+		<div class="line"></div>        
+        <div class="content">
+                @RenderBody()		
+            </div>
+            <div class="line"></div>
+		<div id="footer">
+			<p class="right">&copy; 2011 - South Bridge Charcoal Grill &nbsp;</p>
+		</div>	
+	</div>
+</body>
+</html>
+

@@ -6,8 +6,8 @@ using System.Data.Entity;
 
 namespace Cuisine.Models
 {
-    public class SampleData : DropCreateDatabaseAlways<CuisineEntities>
-    //DropCreateDatabaseIfModelChanges<CuisineEntities>
+    public class SampleData : DropCreateDatabaseIfModelChanges<CuisineEntities>
+        //DropCreateDatabaseAlways<CuisineEntities>
     {
         protected override void Seed(CuisineEntities context)
         {
