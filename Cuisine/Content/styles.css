@@ -1,8 +1,3 @@
-/* Free css docuement by http://Templatesperfect.com
-Template: Earlyish
- Author Paarth */
-
-
 *{margin:0;padding:0}:focus,:active {outline:0}img{border: 0}
 body { font: .8em Arial, Tahoma, Verdana; background: #fff url(Images/bg.gif) repeat-x; color: #777; }
 a { text-decoration: none; color: #065d89; }
@@ -16,7 +11,7 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .clear { clear: both; }
 #content { width: 970px; margin: 0 auto; }
 	#top { color: #ccc; padding: 6px 20px 0; font-size: .84em; text-align: right; }
-	#logo { float: left;padding: 50px 15px 15px; margin: -46px 0 10px; }
+	#logo { float: left;padding: 50px 0px 15px; margin: -46px 0 10px; }
 		#logo h1 { text-shadow: 1px 1px 1px #7E0E0E; }
 	#menu { float: right; margin: 40px 20px 0; }
 		#menu li { display: inline; font-size: 1.3em; }

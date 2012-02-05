@@ -24,6 +24,7 @@ function DeleteFromBasket(ProductId) {
         }
     });
 }
+
 function UpdateBasket(ProductId) {
     $.ajax({
         type: "post",
@@ -33,6 +34,21 @@ function UpdateBasket(ProductId) {
         }
     });
 }
+
+
+function AddDeal(ProductId) {
+    $.ajax({
+        type: "post",
+        url: "/Order/AddToCart?ProductId=" + ProductId,
+        success: function (html) {
+            window.location.href = '/Order';
+        }
+    });
+}
+
+
+
+
 
 function OrderCuisine() {
     $.ajax({
