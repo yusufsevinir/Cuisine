@@ -8,83 +8,69 @@
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
-@using (Html.BeginForm("Order","Order")) {
-    @Html.ValidationSummary(true)
-    <fieldset>
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.FirstName)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.FirstName)
-            @Html.ValidationMessageFor(model => model.FirstName)
-        </div>
-
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.LastName)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.LastName)
-            @Html.ValidationMessageFor(model => model.LastName)
-        </div>
-
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.Address)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.Address)
-            @Html.ValidationMessageFor(model => model.Address)
-        </div>
-
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.City)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.City)
-            @Html.ValidationMessageFor(model => model.City)
-        </div>
-
-        @*<div class="csSubCell1">
-            @Html.LabelFor(model => model.State)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.State)
-            @Html.ValidationMessageFor(model => model.State)
-        </div>*@
-
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.PostalCode)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.PostalCode)
-            @Html.ValidationMessageFor(model => model.PostalCode)
-        </div>
-
-       @* <div class="csSubCell1">
-            @Html.LabelFor(model => model.Country)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.Country)
-            @Html.ValidationMessageFor(model => model.Country)
-        </div>*@
-
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.Phone)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.Phone)
-            @Html.ValidationMessageFor(model => model.Phone)
-        </div>
-
-        <div class="csSubCell1">
-            @Html.LabelFor(model => model.Email)
-        </div>
-        <div class="csSubCell2">
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-        </div>
-        <p>
-             <input type="submit" value="Order Now" class="csbtnImagegreen">
-        </p>
-    </fieldset>
-}
-
+<form class= "form-horizontal" method="post" action="" id="OrderForm">
+            <h3 style="background-color:#f6af3a;color:white"><span class="label label-info" style="font-size:12px">Order Online Details</span></h3>
+            <h3 style="text-align:center"><span class="label label-warning" style="text-align:left">All form fields are required</span></h3>
+            
+            <div class="control-group" style="margin:0px;text-align:left">
+                <span class="label" style="text-align:left" for="txtFirstName">First Name</span>
+                <div class="controls" style="margin-left:100px">
+                       <input type="text" class="span4" id="txtFirstName"/>
+                       <h5>
+                            <label visible="false" id="lblValidationFirstName"></label>
+                        </h5>
+                </div>
+            </div>
+            <div class="control-group" style="margin:0px;text-align:left">
+                <span class="label" style="text-align:left" for="txtLastName">Last Name</span>
+                <div class="controls" style="margin-left: 100px">
+                       <input type="text" class="span4" id="txtLastName"/>
+                       <h5>
+                            <label visible="false" id="lblValidationLastName"></label>
+                        </h5>
+                </div>
+            </div>
+            <div class="control-group" style="margin:0px;text-align:left">
+                <span class="label" style="text-align:left" for="txtAddress">Address</span>
+                <div class="controls" style="margin-left: 100px">
+                       <textarea class="span4" id="txtAddress" rows="4" cols="2"></textarea>
+                       <h5>
+                            <label visible="false" id="lblValidationAddress"></label>
+                        </h5>
+                </div>
+            </div>
+            <div class="control-group" style="margin:0px;text-align:left">
+                <span class="label" style="text-align:left" for="txtPostCode">Post Code</span>
+                <div class="controls" style="margin-left: 100px">
+                       <input type="text" class="span4" id="txtPostCode"/>
+                       <h5>
+                            <label visible="false" id="lblValidationPostCode"></label>
+                        </h5>
+                </div>
+            </div>
+            <div class="control-group" style="margin:0px;text-align:left">
+                <span class="label" style="text-align:left" for="txtPhone">Phone</span>
+                <div class="controls" style="margin-left: 100px">
+                       <input type="text" class="span4" id="txtPhone"/>
+                       <h5>
+                            <label visible="false" id="lblValidationPhone"></label>
+                        </h5>
+                </div>
+            </div>
+            <div class="control-group" style="margin:0px;text-align:left">
+                <span class="label" style="text-align:left" for="txtEmail">Email</span>
+                <div class="controls" style="margin-left: 100px">
+                       <input type="text" class="span4" id="txtEmail"/>
+                       <h5>
+                            <label visible="false" id="lblValidationEmail"></label>
+                        </h5>
+                </div>
+            </div>
+                        
+            <div class="control-group" style="margin:0px;text-align:left">
+                <div class="controls" style="margin-left: 100px">
+                     <input type="submit" style="width:145px" value="Order Now" class="btn-success" onclick="OrderOnline();"/>
+                     <input type="submit" style="width:145px" value="Cancel" class="btn-danger"/>
+                </div>
+            </div>
+</form>

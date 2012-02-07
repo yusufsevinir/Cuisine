@@ -20,7 +20,10 @@ namespace Cuisine.Models
                 new Category { Name = "Chicken & Fish" },
                 new Category { Name = "Extras" },
                 new Category { Name = "Desserts" },
-                new Category { Name = "Soft Drinks" }                
+                new Category { Name = "Soft Drinks" },
+                new Category { Name = "Deals" },   
+                new Category { Name = "Kids Menu" },   
+          
             };
 
             
@@ -401,6 +404,30 @@ namespace Cuisine.Models
                     Price = 1.80M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg",
                     Description = "Coke,Diet Coke,Seven Up,Fanta"
+                },
+                new Product {Name = "Meal Deal 1", 
+                    Category = categories.Single(s=>s.Name == "Deals"),
+                    Price = 4.50M,
+                    ProductImageUrl ="/Content/Images/placeholder.jpg",
+                    Description = "1/4 pounder with cheese, chips & drink"
+                },
+                new Product {Name = "Meal Deal 2", 
+                    Category = categories.Single(s=>s.Name == "Deals"),
+                    Price = 5.20M,
+                    ProductImageUrl ="/Content/Images/placeholder.jpg",
+                    Description = "Chicken fillet sandwich, chips & drink"
+                },
+                 new Product {Name = "Meal Deal 3", 
+                    Category = categories.Single(s=>s.Name == "Deals"),
+                    Price = 5.90M,
+                    ProductImageUrl ="/Content/Images/placeholder.jpg",
+                    Description = "1/2 pounder with cheese, chips & drink"
+                },
+                 new Product {Name = "Family Special", 
+                    Category = categories.Single(s=>s.Name == "Deals"),
+                    Price = 16.00M,
+                    ProductImageUrl ="/Content/Images/placeholder.jpg",
+                    Description = "1 skewer each of special shish, chicken,kofte, slices of doner, humus, 2 chips, mix salad, 2 pittas, bottle of soft drink"
                 }
             }.ForEach(a => context.Products.Add(a));
         }

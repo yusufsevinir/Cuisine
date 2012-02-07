@@ -63,6 +63,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
@@ -91,31 +95,30 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\about.png" />
-    <Content Include="Content\Images\background.jpg" />
-    <Content Include="Content\Images\background.png" />
-    <Content Include="Content\Images\bg.gif" />
-    <Content Include="Content\Images\business1.jpg" />
-    <Content Include="Content\Images\business2.jpg" />
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\aspnetdb_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\3.jpg" />
     <Content Include="Content\Images\button-minus.gif" />
     <Content Include="Content\Images\button-plus.gif" />
     <Content Include="Content\Images\fb.gif" />
+    <Content Include="Content\Images\glyphicons-halflings.png" />
     <Content Include="Content\Images\green-button-repeat.png" />
     <Content Include="Content\Images\green-button-right.png" />
     <Content Include="Content\Images\header.png" />
-    <Content Include="Content\Images\home-showcase.png" />
-    <Content Include="Content\Images\line.png" />
+    <Content Include="Content\Images\images.jpg" />
+    <Content Include="Content\Images\images2.jpg" />
+    <Content Include="Content\Images\images3.jpg" />
     <Content Include="Content\Images\logo.jpg" />
-    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\mail.gif" />
     <Content Include="Content\Images\monsters\img1.png" />
     <Content Include="Content\Images\monsters\img2.png" />
     <Content Include="Content\Images\monsters\img3.png" />
     <Content Include="Content\Images\monsters\img4.png" />
     <Content Include="Content\Images\monsters\img5.png" />
-    <Content Include="Content\Images\navleft.png" />
     <Content Include="Content\Images\placeholder.gif" />
-    <Content Include="Content\Images\placeholder.jpg" />
     <Content Include="Content\Images\rss.gif" />
     <Content Include="Content\Images\services.png" />
     <Content Include="Content\Images\slide-title-active-1.jpg" />
@@ -126,9 +129,6 @@
     <Content Include="Content\Images\templatesperfect.png" />
     <Content Include="Content\Images\topnav.png" />
     <Content Include="Content\Images\tw.gif" />
-    <Content Include="Content\site.bundle.css" />
-    <Content Include="Content\site.css" />
-    <Content Include="Content\template.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -165,7 +165,6 @@
     <Content Include="Design\cebgray\license.txt" />
     <Content Include="Design\cebgray\screenshot.png" />
     <Content Include="Design\cebgray\template.css" />
-    <Content Include="Content\styles.css" />
     <Content Include="Design\earlyish\Earlyish.jpg" />
     <Content Include="Design\earlyish\images\about.png" />
     <Content Include="Design\earlyish\images\bg.gif" />
@@ -195,6 +194,8 @@
     <Content Include="Design\earlyish\templatesperfect.png" />
     <Content Include="Design\earlyish\terms-of-use.html" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap-carousel.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Cuisine\Cuisine.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -250,7 +251,8 @@
     <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Design\earlyish\css\" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +292,22 @@
     <Content Include="Views\Store\CategoryMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
     <None Include="Design\cebgray\images\header.psd" />
     <None Include="Design\cebgray\images\logo.psd" />
     <None Include="Design\cebgray\images\navleft.psd" />
@@ -323,7 +341,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
-          <DevelopmentServerPort>26641</DevelopmentServerPort>
+          <DevelopmentServerPort>41116</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

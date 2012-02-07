@@ -2,45 +2,60 @@
 @{
     Layout = "";
 }
-<div class="orderContents">
-    <table class="basketText">
-		            <tbody>
-                        @foreach (var cart in Model.CartItems)
-                        {
-                            <tr>
-			                    <td colspan="3" class="boldPrice"><strong>@cart.Product.Name</strong></td>
-		                    </tr>
-		                    <tr>
-			                    <td style="padding-bottom:3px;" class="csSubCell1"><div>@cart.Count</div></td>
-			                    <td class="csSubCell2"><div style="font-weight:bold;">
-                                    <div style="float: right;">@cart.Product.Price</div>
-                                    <div style="float: right;">£</div><div style="clear:both"></div></div></td>
-			                    <td class="minusCls csSubCell3"><input type="image" src="../../Content/Images/button-minus.gif"
-                                    onclick="DeleteFromBasket(@cart.ProductId);" style="border-width:0px;"/></td>
-		                    </tr>
-                        }
-		                <tr class="orderTotal borderTop">
-			                <td class="csSubCell1"><strong>Subtotal:</strong></td>
-			                <td class="csSubCell2"><div style="font-weight:bold;">
-                                <div style="float: right;">@Model.CartTotal</div>
-                                <div style="float: right;">£</div><div style="clear:both"></div></div></td>
-			                <td class="csSubCell3"></td>
-		                </tr>
-		                <tr>
-			                <td colspan="3"><div class="minimumOrder"><p><strong>You need to spend £11 or more to order</strong></p></div></td>
-		                </tr>
-		                <tr align="left">
-			                <td colspan="3" style="padding-top:15px;">
-                            
-                            <input type="submit" value="Order Now" 
-                            onclick="OrderCuisine();" 
-                            class="csbtnImagegreen">
-                            </td>
-		                </tr>
-	                </tbody>
-                </table>
-                <div id="GetDetailsDiv" class="basketText">
-                
-                </div>
 
+<div class="row">
+    <div class="span4">
+    <table class="table-striped">
+        <tbody>
+            @foreach (var cart in Model.CartItems)
+            {
+                <tr>
+			        <td colspan="3"><h6>@cart.Product.Name</h6></td>
+		        </tr>
+		        <tr>
+			        <td style="padding-bottom:3px;">
+                        <div><h5>@cart.Count</h5></div>
+                    </td>
+			        <td>
+                        <div style="font-weight:bold;">
+                            <div style="float: right;"><h5>@cart.Product.Price</h5></div>
+                            <div style="float: right;"><h5>£</h5></div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </td>
+			        <td>
+                        <input type="image" src="../../Content/Images/button-minus.gif"
+                            onclick="DeleteFromBasket(@cart.ProductId);" style="border-width:0px;"/>
+                    </td>
+		        </tr>
+            }
+		        <tr>
+			        <td><h5>Subtotal:</h5></td>
+			        <td>
+                        <div style="font-weight:bold;">
+                            <div style="float: right;"><h5>@Model.CartTotal</h5></div>
+                            <div style="float: right;"><h5>£</h5></div><div style="clear:both"></div>
+                        </div>
+                    </td>
+			        <td>
+                    </td>
+		        </tr>
+		        <tr>
+			        <td colspan="3">
+                        <div>
+                            <p><h6>You need to spend £11 or more to order</h6></p>
+                        </div>
+                    </td>
+		        </tr>
+		        <tr align="left">
+			        <td colspan="3" style="padding-top:15px;">        
+                        <input type="submit" value="Order Now" onclick="OrderCuisine();"/>
+                    </td>
+		        </tr>
+	    </tbody>
+    </table>
+    <div id="GetDetailsDiv">
+                
+    </div>
+    </div>
 </div>

@@ -6,42 +6,68 @@
     <script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="../../Scripts/Cuisine/Cuisine.js" type="text/javascript"></script>
     <script src="../../Scripts/jquery.blockUI.js" type="text/javascript"></script>
+    <script src="../../Scripts/bootstrap-carousel.js" type="text/javascript"></script>
 
-	<link rel="stylesheet" type="text/css" href="../../Content/styles.css" media="screen" />
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	@*<link rel="stylesheet" type="text/css" href="../../Content/styles.css" media="screen" />
+    <link href="../../Content/need.css" rel="stylesheet" type="text/css" />*@
 	<title>@ViewBag.Title</title>
 </head>
 <body>
-	<div id="content">
-		<p id="top">Contact us now <span class="phone">020 8681 1566</span> <a href="#"> <img src= "../../Content/Images/fb.gif" alt="" />  </a>
-<a href="#"> <img src="../../Content/Images/mail.gif" alt="" /></a>
-  </p>
-		<div id="logo">
-            <h1><a href="Home">
-                    <img src="../../Content/Images/logo.jpg" alt="Earlyish" />
-                </a>
-                </h1>
-		</div>
-		<ul id="menu">
-			<li id="liHome">@Html.ActionLink("Home","Index","Home")</li>
-			<li id="liOrder">@Html.ActionLink("Order Online","Index","Order")</li>
-            <li id="liContact">@Html.ActionLink("Contact Us","Contact","Home") </li>			
-		</ul>
+    <div class="navbar">
+        <div class="navbar-inner" >
+            <div class="container">
+                            
+                <ul class="nav">
+                    <li>
+                        <img src="../../Content/Images/logo.jpg" />
+                    </li>
+			        <li>
+                        @Html.ActionLink("Home","Index","Home")
+                    </li>
+			        <li>
+                        @Html.ActionLink("Order Online", "Index", "Order")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact Us", "Contact", "Home")
+                    </li>
+                    <li style='float:right'>
+                        <a href="#">
+                            <img src= "../../Content/Images/fb.gif" alt="" />
+                        </a>
+                    </li>            
+                    <li style='float:right'>
+                        <a href="#"> 
+                            <img src="../../Content/Images/mail.gif" alt="" />
+                        </a>
+                    </li>
+		        </ul>        
 		<div class="line"></div>
-        <div class="line"></div>
-        <div class="content">
+            </div>
+        </div>
+    </div>
+	
+    <div class="container">
+        <div class="row">
+            <div class="span12">
                 @RenderBody()		
+            </div>
+        </div>	
+    </div>
+	@*	<div class="content">
+                
 		@*<div class="right">
         
 			<p><img src="../../Content/Images/business1.jpg" width="160" height="110" alt="Alt text to go here" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor.  ac..<a href="#">Learn more</a></p>
 			<br />
 			<p><img src="../../Content/Images/business2.jpg" width="160" height="110" alt="Alt text to go here" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. ..<a href="#">Learn more</a> </p>
-		</div>*@
+		</div>
             </div>
             <div class="line"></div>
 		<div id="footer">
 			<p class="right">&copy; 2011 - South Bridge Charcoal Grill &nbsp;</p>
 		</div>	
-	</div>
+@*	</div>*@
 </body>
 </html>
 

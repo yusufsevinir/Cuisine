@@ -33,3 +33,17 @@ C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\bin\Cuisine.dll
 C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\bin\Cuisine.pdb
 C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\obj\Debug\Cuisine.dll
 C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
+C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\Cuisine.dll
+C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\Cuisine.pdb
+C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\EntityFramework.dll
+C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\EntityFramework.xml
+C:\Users\neccar\Downloads\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\neccar\Downloads\Cuisine\Cuisine\obj\Debug\Cuisine.dll
+C:\Users\neccar\Downloads\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\Cuisine.dll
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\Cuisine.pdb
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\EntityFramework.dll
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\EntityFramework.xml
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\obj\Debug\Cuisine.dll
+C:\Users\Turevo\Desktop\Cuisine\Cuisine\obj\Debug\Cuisine.pdb

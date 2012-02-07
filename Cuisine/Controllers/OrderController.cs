@@ -32,6 +32,15 @@ namespace Cuisine.Controllers
         public ActionResult AddToCart(int productId)
         {
             var viewModel = (ProductOrderViewModel)Session["ProductOrderViewModel"];
+
+            if (viewModel == null) {
+                viewModel = new ProductOrderViewModel
+                {
+                    Product = context.Products.ToList<Product>(),
+                    Category = context.Categories.ToList<Category>()
+                };
+                Session["ProductOrderViewModel"] = viewModel;
+            }
             var newCart = new Cart();
             bool exist = false;
             
@@ -86,23 +95,24 @@ namespace Cuisine.Controllers
             return View("ShoppingCart", (ProductOrderViewModel)Session["ProductOrderViewModel"]);
         }
 
-        public ActionResult Order(Order model)
+        [HttpPost]
+        public ActionResult Order(Order newOrder)
         {
             try
             { 
                 Order order = new Order();
                 order.OrderId = Guid.NewGuid();
-                order.FirstName = model.FirstName.Trim();
-                order.LastName = model.LastName.Trim();
+                order.FirstName = newOrder.FirstName.ToString();
+                order.LastName = Request.Form["txtLastName"].ToString();
                 order.OrderDate = DateTime.UtcNow;
-                order.Phone = model.Phone;
-                order.PostalCode = model.PostalCode;
-                order.Address = model.Address;
-                order.Email = model.Email;
+                order.Phone = HttpContext.Request.Form["txtPhone"].ToString();
+                order.PostalCode = HttpContext.Request.Form["txtPostCode"].ToString();
+                order.Address = Request.Form["txtAddress"].ToString();
+                order.Email = HttpContext.Request.Form["txtEmail"].ToString();
                 order.OrderDetails = new List<OrderDetail>();
                 
                 ProductOrderViewModel viewData = (ProductOrderViewModel) Session["ProductOrderViewModel"];
-                order.Total = model.Total;
+                order.Total = viewData.CartTotal;
                 foreach(var cart in viewData.CartItems)
                 {
                     OrderDetail orderDetail = new OrderDetail();

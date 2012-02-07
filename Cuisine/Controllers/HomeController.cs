@@ -15,20 +15,13 @@ namespace Cuisine.Controllers
         public ActionResult Index()
         {
             // Get most popular albums
-            var albums = GetTopSellingAlbums(5);
-
+            var albums = GetDeals();
             return View(albums);
         }
 
-        private List<Product> GetTopSellingAlbums(int count)
+        private List<Product> GetDeals()
         {
-            // Group the order details by Product and return
-            // the albums with the highest count
-
-            return storeDB.Products
-                .OrderByDescending(a => a.OrderDetails.Count())
-                .Take(count)
-                .ToList();
+            return storeDB.Products.Where(p => p.Category.Name == "Deals").ToList();
         }
 
         public ActionResult Contact()
