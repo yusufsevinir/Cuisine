@@ -8,7 +8,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <a href="@Url.Action("ListByCategory", "Product", new { id = item.CategoryId })"> @Html.DisplayFor(modelItem => item.Name)</a>
+            <a href="@Url.Action("ListByCategory", "Product", new { id = item.CategoryId })"> 
+                    @Html.DisplayFor(modelItem => item.Name)
+            </a>
         </td>
     </tr>
 }

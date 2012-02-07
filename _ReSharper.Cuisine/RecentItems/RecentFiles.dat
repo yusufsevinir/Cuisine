@@ -2,8 +2,31 @@
   <RecentFiles>
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:ProductController.cs" caret="622" fromTop="26" />
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:template.css" caret="17" fromTop="0" />
-    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="660" fromTop="18" />
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="3996" fromTop="4" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:ProductController.cs" caret="662" fromTop="27" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Account/f:LogOn.cshtml" caret="266" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Account/f:Register.cshtml" caret="2025" fromTop="34" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Shared/f:AdminLayout.cshtml" caret="1492" fromTop="27" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Web.config" caret="4334" fromTop="15" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:CategoryController.cs" caret="271" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Edit.cshtml" caret="1273" fromTop="22" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Details.cshtml" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Delete.cshtml" caret="590" fromTop="25" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Create.cshtml" caret="1121" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Edit.cshtml" caret="2253" fromTop="17" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Details.cshtml" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Delete.cshtml" caret="1239" fromTop="23" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Create.cshtml" caret="2260" fromTop="14" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="487" fromTop="22" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="101" fromTop="3" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Order/f:ShoppingCart.cshtml" caret="1393" fromTop="24" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Order/f:Order.cshtml" caret="0" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Order/f:Index.cshtml" caret="521" fromTop="18" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:styles.css" caret="3757" fromTop="18" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="4321" fromTop="11" />
   </RecentFiles>
   <RecentEdits>
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Design/d:cebgray/f:template.css" caret="1750" fromTop="8" />
@@ -12,5 +35,26 @@
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="538" fromTop="11" />
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="4949" fromTop="21" />
     <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:_Layout.cshtml" caret="3996" fromTop="4" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:styles.css" caret="12708" fromTop="35" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:styles.css" caret="5957" fromTop="7" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:styles.css" caret="6297" fromTop="14" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Content/f:styles.css" caret="12708" fromTop="0" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Create.cshtml" caret="2258" fromTop="14" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Delete.cshtml" caret="1239" fromTop="23" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Product/f:Edit.cshtml" caret="2253" fromTop="17" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Create.cshtml" caret="1121" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Delete.cshtml" caret="653" fromTop="26" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Edit.cshtml" caret="1172" fromTop="15" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:CategoryController.cs" caret="268" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Web.config" caret="4335" fromTop="15" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Shared/f:AdminLayout.cshtml" caret="1492" fromTop="27" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="200" fromTop="8" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:ProductController.cs" caret="270" fromTop="11" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Account/f:LogOn.cshtml" caret="114" fromTop="7" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Account/f:Register.cshtml" caret="2025" fromTop="34" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Order/f:Index.cshtml" caret="4222" fromTop="18" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Order/f:ShoppingCart.cshtml" caret="931" fromTop="17" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="2923" fromTop="17" />
+    <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Home/f:Index.cshtml" caret="3221" fromTop="23" />
   </RecentEdits>
 </RecentFiles>
