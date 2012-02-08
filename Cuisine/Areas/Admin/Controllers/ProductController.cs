@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Cuisine.Models;
+using System.IO;
 
 namespace Cuisine.Areas.Admin.Controllers
 {
@@ -49,6 +50,12 @@ namespace Cuisine.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (Request.Files.Count > 0 && Request.Files[0] != null) {
+                    string filePath = Path.Combine(HttpContext.Server.MapPath("~/Content/ProductImages"),
+                        Path.GetFileName(Request.Files[0].FileName));
+                    Request.Files[0].SaveAs(filePath);
+                    product.ProductImageUrl = filePath;
+                }
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
