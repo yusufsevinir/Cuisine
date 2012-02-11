@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace Cuisine.Models
 {
-    [Bind(Exclude = "AlbumId")]
+    //[Bind(Exclude = "ProductId")]
     public class Product
     {
-        [ScaffoldColumn(false)]
+        //[ScaffoldColumn(false)]
         public int ProductId { get; set; }
 
         [DisplayName("Category")]
@@ -31,6 +31,8 @@ namespace Cuisine.Models
         public string ProductImageUrl { get; set; }
 
         public byte Size { get; set; }
+
+        public ProductSize PSize { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }

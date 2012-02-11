@@ -83,6 +83,13 @@ namespace Cuisine.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (Request.Files.Count > 0 && Request.Files[0] != null)
+                {
+                    string filePath = Path.Combine(HttpContext.Server.MapPath("~/Content/ProductImages"),
+                        Path.GetFileName(Request.Files[0].FileName));
+                    Request.Files[0].SaveAs(filePath);
+                    product.ProductImageUrl = filePath;
+                }
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
