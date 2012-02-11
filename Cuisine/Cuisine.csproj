@@ -95,10 +95,6 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ASPNETDB.MDF" />
-    <Content Include="App_Data\aspnetdb_log.ldf">
-      <DependentUpon>ASPNETDB.MDF</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\3.jpg" />
     <Content Include="Content\Images\addresshead.gif" />
@@ -252,8 +248,9 @@
     <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Content\ProductImages\" />
     <Folder Include="Design\earlyish\css\" />
   </ItemGroup>
   <ItemGroup>
@@ -309,6 +306,7 @@
     <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\AdminLayout.cshtml" />
     <None Include="Design\cebgray\images\header.psd" />
     <None Include="Design\cebgray\images\logo.psd" />
     <None Include="Design\cebgray\images\navleft.psd" />

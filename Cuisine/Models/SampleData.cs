@@ -6,8 +6,8 @@ using System.Data.Entity;
 
 namespace Cuisine.Models
 {
-    public class SampleData : DropCreateDatabaseAlways<CuisineEntities>
-    //DropCreateDatabaseIfModelChanges<CuisineEntities>
+    public class SampleData : DropCreateDatabaseIfModelChanges<CuisineEntities>
+    //    DropCreateDatabaseAlways<CuisineEntities>    
     {
         protected override void Seed(CuisineEntities context)
         {
@@ -75,21 +75,26 @@ namespace Cuisine.Models
                     Price = 4.20M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg",
                     Description = "Cubes of chicken, marinated in garlic curry powder & tomato pure",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
+                    
                 },
                 new Product {Name = "Chicken Kebab", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
                     Price = 5.90M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg",
                     Description = "Cubes of chicken, marinated in garlic curry powder & tomato pure",
-                    Size = Convert.ToByte(ProductSize.Large)
+                    Size = Convert.ToByte(ProductSize.Large),
+                    PSize = ProductSize.Large
                 },
                 new Product {Name = "Shish Kebab", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
                     Price = 4.20M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg", 
                     Description = "Cubes of lamb, marinated in vegetable oil, lemon juice & charcoal grill",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
+
                 },
                 new Product {Name = "Shish Kebab", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
@@ -103,7 +108,8 @@ namespace Cuisine.Models
                     Price = 4.20M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg" ,
                     Description = "Minced lamb, skewered with onion, peppers, spices & charcoal grilled",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
                 },
                 new Product {Name = "Kofte Kebab", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
@@ -141,7 +147,8 @@ namespace Cuisine.Models
                     Price = 4.70M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg" ,
                     Description = "",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
                 },
                 new Product {Name = "Lamb Doner Meat & Chips", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
@@ -155,7 +162,8 @@ namespace Cuisine.Models
                     Price = 5.20M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg" ,
                     Description = "",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
                 },
                 new Product {Name = "Lamb Doner Meat & Chips & Salad", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
@@ -169,7 +177,8 @@ namespace Cuisine.Models
                     Price = 5.20M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg" ,
                     Description = "",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
                 },
                 new Product {Name = "Chicken Doner Meat & Chips", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
@@ -183,7 +192,8 @@ namespace Cuisine.Models
                     Price = 5.70M,
                     ProductImageUrl ="/Content/Images/placeholder.jpg" ,
                     Description = "",
-                    Size = Convert.ToByte(ProductSize.Small)
+                    Size = Convert.ToByte(ProductSize.Small),
+                    PSize = ProductSize.Small
                 },
                 new Product {Name = "Chicken Doner Meat & Chips & Salad", 
                     Category = categories.Single(s=>s.Name == "Kebabs"),
@@ -204,10 +214,6 @@ namespace Cuisine.Models
                     ProductImageUrl ="/Content/Images/placeholder.jpg" ,
                     Description = ""
                 },
-
-
-
-
 
 
                 new Product {Name = "Shish & Doner", 

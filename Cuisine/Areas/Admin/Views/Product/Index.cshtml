@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
 <h2>Index</h2>
@@ -23,9 +24,9 @@
         <th>
             Price
         </th>
-        <th>
+@*        <th>
             ProductImageUrl
-        </th>
+        </th>*@
         <th>
             Size
         </th>
@@ -46,9 +47,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>
-        <td>
+@*        <td>
             @Html.DisplayFor(modelItem => item.ProductImageUrl)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Size)
         </td>
