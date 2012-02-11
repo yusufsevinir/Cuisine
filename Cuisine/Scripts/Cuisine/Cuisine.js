@@ -50,23 +50,20 @@ function OrderCuisine() {
         type: "post",
         url: "/Order/GetOrderDetails",
         success: function (html) {
-            $.blockUI({ message: html, css: { top: '10%'} }
-                );
-            //            $("#GetDetailsDiv").html(html);
-            //                left: '40%', right: '40%',bottom:'10%' } 
+        $.blockUI({
+            message: html, 
+                css: { top: '10%',left: '36%',width:'28%', right: '36%',bottom:'10%' }
+            });
         }
     });
 }
 
-function OrderOnline() {
+function OrderOnline(event) {
+    event.preventDefault();
     $.ajax({
         type: "post",
-        url: "/Order/Order",
-        contentType: 'application/json',
-        data: JSON.stringify({ newOrder: $("#OrderForm").serializeArray() }),
-
-//        data: $("#OrderForm").serialize(),
-//        dataType: "json",
+        url: $("#OrderAction").val(),
+        data: $(".form-stacked").serialize(),
         success: function (text) {
             if (text == true) {
                 $.blockUI({ message: '<h1> Order has been successfully added. Thanks for your order!</h1>' });

@@ -101,6 +101,7 @@
     </Content>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\3.jpg" />
+    <Content Include="Content\Images\addresshead.gif" />
     <Content Include="Content\Images\button-minus.gif" />
     <Content Include="Content\Images\button-plus.gif" />
     <Content Include="Content\Images\fb.gif" />

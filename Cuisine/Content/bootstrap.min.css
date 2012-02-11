@@ -728,4 +728,217 @@ dd p{line-height:120%}
 		#menu li { display: inline; font-size: 1.3em; }
 			#menu li a { float: left; color: #808080; padding: 0 0 5px; margin: 0 0 0 55px; }
 			#menu li a:hover, #menu li.current a, #menu li a:focus { color: #000; border-bottom: 1px solid #ddd; }
-	
+			
+.block {
+    background: url("/assets/adminus/bnd-6943529b5c0c4fa404cd59a7b7f654f5.gif") repeat-x scroll center bottom #FFFFFF;
+    margin-bottom: 18px;
+    padding-bottom: 5px;
+    text-align:left;
+    cursor:default;
+}
+.block .bendl {
+    background: url("/assets/adminus/bendl-da79a1600418494f042efd5ab000f278.gif") no-repeat scroll left bottom transparent;
+    float: left;
+    height: 5px;
+    width: 5px;
+}
+.block .bendr {
+    background: url("/assets/adminus/bendr-eccbc4907c80c86e6fc7516c8ee9a151.gif") no-repeat scroll left bottom transparent;
+    float: right;
+    height: 5px;
+    width: 5px;
+}
+.block .block_head {
+    background: url("Images/addresshead.gif") repeat-x scroll 0 0 transparent;
+    height: 54px;
+    line-height: 54px;
+}
+.block .block_head .bheadl {
+    background: url("/assets/adminus/bheadl-6b02ddbd39492930a12434774c79f35d.gif") no-repeat scroll left top transparent;
+    float: left;
+    height: 54px;
+    width: 20px;
+}
+.block .block_head .bheadr {
+    background: url("/assets/adminus/bheadr-d054a913e979c236ad4f69e7627ec6d2.gif") no-repeat scroll right top transparent;
+    float: right;
+    height: 54px;
+    width: 20px;
+}
+.block .block_head h2 {
+    color: #555555;
+    float: left;
+    font-size: 18px;
+    line-height: 54px;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+.block .block_head ul {
+    float: right;
+    font-size: 11px;
+    line-height: 54px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+.block .block_head ul li {
+    background: url("/assets/adminus/phs-2eb46efac769e96b9ca881bf4dd5fb22.gif") no-repeat scroll 7px center transparent;
+    display: inline;
+    font-weight: bold;
+    padding: 3px 0 3px 20px;
+}
+.block .block_head ul li:first-child {
+    background: none repeat scroll 0 0 transparent;
+}
+.block .block_head ul li a {
+    color: #666666;
+    outline: medium none;
+    text-decoration: none;
+}
+.block .block_head ul li a:hover {
+    color: #008EE8;
+}
+.block .block_head ul li a.btn:hover {
+    color: #333333;
+}
+.block .block_head ul li.active a {
+    color: #888888;
+}
+.block .block_head form {
+    float: right;
+    height: 34px;
+    line-height: 24px;
+    padding: 15px 0;
+}
+.block .block_head form .text {
+    background: url("/assets/adminus/srch-5fcd5bf9ab0389e6697a6a17cb7da1f1.gif") no-repeat scroll left center transparent;
+    border: 0 none;
+    color: #999999;
+    font-size: 11px;
+    height: 15px;
+    margin: 0;
+    padding: 5px 10px 5px 25px;
+}
+.block .block_head form .text:focus {
+    background: url("/assets/adminus/srch_-9c25b5bd61a8ee3195dff85ecce7e88f.gif") no-repeat scroll left center transparent;
+    color: #666666;
+}
+.block .block_head select {
+    text-transform: none;
+}
+.block .block_content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    overflow: hidden;
+    padding: 10px 20px 0;
+}
+.block.small {
+    padding-bottom: 0;
+    
+}
+.block.small.left {
+    clear: none;
+    float: left;
+}
+.block.small.right {
+    clear: none;
+    float: right;
+}
+.block.small.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.block.small.login {
+    padding-bottom: 5px;
+}
+.block.withsidebar .bendl {
+    background: url("/assets/adminus/bendsb-8bc2c32e81186b7fe1926d6e96f125c8.gif") no-repeat scroll left bottom transparent;
+    
+}
+.block.withsidebar .block_content {
+    background: url("/assets/adminus/sidebar-a1b85259a1a1aeab19fe6966c22dda86.gif") repeat-y scroll 0 0 transparent;
+    padding: 0 20px 0 210px;
+    position: relative;
+}
+.block.withsidebar .block_content:before, .block.withsidebar .block_content:after {
+    content: "";
+    display: table;
+}
+.block.withsidebar .block_content:after {
+    clear: both;
+}
+.block.withsidebar .block_content .sidebar {
+    float: left;
+    font-size: 11px;
+    margin: 0 20px 18px -210px;
+    width: 190px;
+}
+.block.withsidebar .block_content .sidebar p {
+    padding: 0 13px 15px;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu {
+    list-style: none outside none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li {
+    background: none repeat scroll 0 50% transparent;
+    border-bottom: 1px solid #CCCCCC;
+    margin: 0;
+    padding: 0;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li a {
+    display: block;
+    font-weight: bold;
+    padding: 10px 13px;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li a .badge {
+    float: right;
+    margin-right: 1px;
+    margin-top: 4px;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li a:hover {
+    background: none repeat scroll 0 0 #FDFDFD;
+    border-right: 1px solid #CCCCCC;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li a:hover .badge {
+    margin-right: 0;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li.active a, .block.withsidebar .block_content .sidebar ul.sidemenu li.active a:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+}
+.block.withsidebar .block_content .sidebar ul.sidemenu li.active a .badge, .block.withsidebar .block_content .sidebar ul.sidemenu li.active a:hover .badge {
+    margin-right: 1px;
+}
+.block.withsidebar .block_content .sidebar_content {
+    float: left;
+    padding: 15px 0;
+    width: 100%;
+}
+.form-stacked label {
+    display: block;
+    float: none;
+    font-weight: bold;
+    line-height: 20px;
+    padding-top: 0;
+    text-align: left;
+}	
+
+.form-stacked input {
+    display: block;
+    margin-left:15px;
+}	
+
+.form-stacked textarea {
+    display: block;
+    margin-left:15px;
+}	
+
+.clearfix 
+{
+    margin-top:9px;
+    }

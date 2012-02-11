@@ -8,69 +8,81 @@
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
-<form class= "form-horizontal" method="post" action="" id="OrderForm">
-            <h3 style="background-color:#f6af3a;color:white"><span class="label label-info" style="font-size:12px">Order Online Details</span></h3>
-            <h3 style="text-align:center"><span class="label label-warning" style="text-align:left">All form fields are required</span></h3>
-            
-            <div class="control-group" style="margin:0px;text-align:left">
-                <span class="label" style="text-align:left" for="txtFirstName">First Name</span>
-                <div class="controls" style="margin-left:100px">
-                       <input type="text" class="span4" id="txtFirstName"/>
-                       <h5>
-                            <label visible="false" id="lblValidationFirstName"></label>
-                        </h5>
+<script type="text/javascript">
+    $(function () {
+        var x = $(".blockUI blockMsg blockPage").width();
+        var y = $(".blockUI blockMsg blockPage").height();
+        $("#OrderDiv").width(x);
+        $("#OrderDiv").height(y);
+
+        $(".help-block").hide();
+    });
+
+</script>
+
+
+
+<div class="block center login small" id="OrderDiv">
+    <input type="hidden" value="@Url.Action("Order", "Order")" id="OrderAction" /> 
+        <div class="block_head">
+            <div class="bheadl"></div>
+            <div class="bheadr"></div>
+            <h2>
+                Order Your Meal
+            </h2>
+            <ul>
+                <li><a onclick="$.unblockUI();">Cancel →</a></li>
+            </ul>
+        </div>
+        <div class="block_content">
+        <form method="post" id="OrderForm" class="form-stacked" style="display:block" action="">        
+            <div class="clearfix">
+                <label for="FirstName">Your First Name:</label>
+                <div class="input">
+                    <input type="text" size="20" name="" id="FirstName" class="span4"/>
+                    <span class="help-block">Required.</span>
                 </div>
             </div>
-            <div class="control-group" style="margin:0px;text-align:left">
-                <span class="label" style="text-align:left" for="txtLastName">Last Name</span>
-                <div class="controls" style="margin-left: 100px">
-                       <input type="text" class="span4" id="txtLastName"/>
-                       <h5>
-                            <label visible="false" id="lblValidationLastName"></label>
-                        </h5>
+            <div class="clearfix">
+                <label for="LastName">Your Last Name:</label>
+                <div class="input">
+                    <input type="text" size="20" name="" id="LastName" class="span4"/>
+                    <span class="help-block">Required.</span>
                 </div>
             </div>
-            <div class="control-group" style="margin:0px;text-align:left">
-                <span class="label" style="text-align:left" for="txtAddress">Address</span>
-                <div class="controls" style="margin-left: 100px">
-                       <textarea class="span4" id="txtAddress" rows="4" cols="2"></textarea>
-                       <h5>
-                            <label visible="false" id="lblValidationAddress"></label>
-                        </h5>
+            <div class="clearfix">
+                <label for="Address">Your Address:</label>
+                <div class="input">
+                    <textarea id="Address" class="span4"/>
+                    <span class="help-block">Required.</span>
                 </div>
             </div>
-            <div class="control-group" style="margin:0px;text-align:left">
-                <span class="label" style="text-align:left" for="txtPostCode">Post Code</span>
-                <div class="controls" style="margin-left: 100px">
-                       <input type="text" class="span4" id="txtPostCode"/>
-                       <h5>
-                            <label visible="false" id="lblValidationPostCode"></label>
-                        </h5>
+            <div class="clearfix">
+                <label for="PostalCode">Your Post Code:</label>
+                <div class="input">
+                    <input type="text" size="20" name="" id="PostalCode" class="span4"/>
+                    <span class="help-block">Required.</span>
                 </div>
             </div>
-            <div class="control-group" style="margin:0px;text-align:left">
-                <span class="label" style="text-align:left" for="txtPhone">Phone</span>
-                <div class="controls" style="margin-left: 100px">
-                       <input type="text" class="span4" id="txtPhone"/>
-                       <h5>
-                            <label visible="false" id="lblValidationPhone"></label>
-                        </h5>
+            <div class="clearfix">
+                <label for="Phone">Your Phone:</label>
+                <div class="input">
+                    <input type="text" size="20" name="" id="Phone" class="span4"/>
+                    <span class="help-block">Required.</span>
                 </div>
             </div>
-            <div class="control-group" style="margin:0px;text-align:left">
-                <span class="label" style="text-align:left" for="txtEmail">Email</span>
-                <div class="controls" style="margin-left: 100px">
-                       <input type="text" class="span4" id="txtEmail"/>
-                       <h5>
-                            <label visible="false" id="lblValidationEmail"></label>
-                        </h5>
+            <div class="clearfix">
+                <label for="Email">Email Address:</label>
+                <div class="input">
+                    <input type="email" value="" size="30" name="" id="Email" class="span4"/>
+                    <span class="help-block">Required.</span>
                 </div>
             </div>
-                        
-            <div class="control-group" style="margin:0px;text-align:left">
-                <div class="controls" style="margin-left: 100px">
-                     <input type="submit" style="width:145px" value="Order Now" class="btn-success" onclick="OrderOnline();"/>
-                     <input type="submit" style="width:145px" value="Cancel" class="btn-danger"/>
-                </div>
-            </div>
-</form>
+        </form>
+            <input type="submit" style="text-align:center" 
+                value="Create Order" class="btn btn-large btn-primary" onclick="OrderOnline(event);">
+
+    </div>
+    <div class="bendl"></div>
+    <div class="bendr"></div>
+</div>
