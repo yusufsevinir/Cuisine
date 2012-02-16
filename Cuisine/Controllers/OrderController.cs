@@ -14,6 +14,7 @@ namespace Cuisine.Controllers
         //
         // GET: /Order/
 
+        private string ErrorMessage = "";
         public ActionResult Index()
         {
             var viewModel = (ProductOrderViewModel)Session["ProductOrderViewModel"];
@@ -27,6 +28,16 @@ namespace Cuisine.Controllers
                 Session["ProductOrderViewModel"] = viewModel;
             }
             return View(viewModel);
+        }
+
+        public ActionResult ViewWarning(bool success)
+        {
+            return View(success);
+        }
+
+        public ActionResult ViewError(string error)
+        {
+            return View(error);
         }
 
         public ActionResult AddToCart(int productId)
@@ -99,42 +110,87 @@ namespace Cuisine.Controllers
         public ActionResult Order(Order newOrder)
         {
             try
-            { 
-                Order order = new Order();
-                order.OrderId = Guid.NewGuid();
-                order.FirstName = newOrder.FirstName.ToString();
-                order.LastName = Request.Form["txtLastName"].ToString();
-                order.OrderDate = DateTime.UtcNow;
-                order.Phone = HttpContext.Request.Form["txtPhone"].ToString();
-                order.PostalCode = HttpContext.Request.Form["txtPostCode"].ToString();
-                order.Address = Request.Form["txtAddress"].ToString();
-                order.Email = HttpContext.Request.Form["txtEmail"].ToString();
-                order.OrderDetails = new List<OrderDetail>();
-                
-                ProductOrderViewModel viewData = (ProductOrderViewModel) Session["ProductOrderViewModel"];
-                order.Total = viewData.CartTotal;
-                foreach(var cart in viewData.CartItems)
+            {
+                if (ValidateInput(newOrder))
                 {
-                    OrderDetail orderDetail = new OrderDetail();
-                    orderDetail.OrderDetailId = Guid.NewGuid();
-                    orderDetail.OrderId = order.OrderId;
-                    orderDetail.ProductId = cart.ProductId;
-                    orderDetail.Quantity = cart.Count;
-                    orderDetail.UnitPrice = cart.Product.Price;
-                    orderDetail.Product = cart.Product;
-                    orderDetail.Order = order;
-                    order.OrderDetails.Add(orderDetail);
+                    Order order = new Order();
+                    order.OrderId = Guid.NewGuid();
+                    order.FirstName = newOrder.FirstName.ToString();
+                    order.LastName = newOrder.LastName.ToString();
+                    order.OrderDate = DateTime.UtcNow;
+                    order.Phone = newOrder.Phone.ToString();
+                    order.PostalCode = newOrder.PostalCode.ToString();
+                    order.Address = newOrder.Address.ToString();
+                    order.Email = newOrder.Email.ToString();
+                    order.OrderDetails = new List<OrderDetail>();
+
+                    ProductOrderViewModel viewData = (ProductOrderViewModel)Session["ProductOrderViewModel"];
+                    order.Total = viewData.CartTotal;
+                    foreach (var cart in viewData.CartItems)
+                    {
+                        OrderDetail orderDetail = new OrderDetail();
+                        orderDetail.OrderDetailId = Guid.NewGuid();
+                        orderDetail.OrderId = order.OrderId;
+                        orderDetail.ProductId = cart.ProductId;
+                        orderDetail.Quantity = cart.Count;
+                        orderDetail.UnitPrice = cart.Product.Price;
+                        orderDetail.Product = cart.Product;
+                        orderDetail.Order = order;
+                        order.OrderDetails.Add(orderDetail);
+                    }
+
+
+                    context.SaveChanges();
+                    Session["ProductOrderViewModel"] = null;
+                    return Json(new Order { IsSuccess = true, ErrorMessage = "" });
                 }
-
-
-                context.SaveChanges();
-                Session["ProductOrderViewModel"] = null;
-                return RedirectToAction("Index", "Home");
             }
             catch(Exception ex)
             {
-                return RedirectToAction("Index", "Home");
+                return Json(new Order { IsSuccess = false, ErrorMessage = "" });
             }
+            return Json(new Order { IsSuccess = false, ErrorMessage = ErrorMessage });
+        }
+
+        private bool ValidateInput(Models.Order newOrder)
+        {
+            bool isValid = true;
+            if (newOrder == null)
+            {
+                ErrorMessage = "Please enter all the required fields";
+                isValid = false;
+            }
+            else if (newOrder.FirstName == "")
+            {
+                ErrorMessage = "Please enter first name!";
+                isValid = false;
+            }
+            else if (newOrder.LastName == "")
+            {
+                ErrorMessage = "Please enter last name!";
+                isValid = false;
+            }
+            else if (newOrder.Address == "")
+            {
+                ErrorMessage = "Please enter address details!";
+                isValid = false;
+            }
+            else if (newOrder.Phone == "")
+            {
+                ErrorMessage = "Please enter phone number!";
+                isValid = false;
+            }
+            else if (newOrder.PostalCode == "")
+            {
+                ErrorMessage = "Please enter post code!";
+                isValid = false;
+            }
+            else if (newOrder.Email == "" || newOrder.Email.ToString().Contains("@") == false)
+            {
+                ErrorMessage = "Please enter email address!";
+                isValid = false;
+            }
+            return isValid;
         }
     }
 }

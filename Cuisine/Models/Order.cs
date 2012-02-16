@@ -63,6 +63,12 @@ namespace Cuisine.Models
         [ScaffoldColumn(false)]
         public decimal Total { get; set; }
 
+        [ScaffoldColumn(false)]
+        public System.String ErrorMessage { get; set; }
+
+        [ScaffoldColumn(false)]
+        public System.Boolean IsSuccess { get; set; }
+
         public List<OrderDetail> OrderDetails { get; set; }
     }
 }
