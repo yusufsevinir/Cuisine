@@ -11,25 +11,26 @@
 
 <script type="text/javascript">
     $(function () {
-        var x = $(".blockUI blockMsg blockPage").width();
-        var y = $(".blockUI blockMsg blockPage").height();
+        var x = $(".blockUI.blockMsg.blockPage").width();
+        var y = $(".blockUI.blockMsg.blockPage").height();
         $("#OrderDiv").width(x);
         $("#OrderDiv").height(y);
 
-        $(".help-block").hide();
+        $("#generalRequired").hide();
+        $(".label.label-important").hide();
 
-        $("#submitForm").click(function() {
+        $("#submitForm").click(function () {
             OrderOnline();
         });
-        
-        
     });
 
 </script>
 
 
 
-<div class="block center login small" id="OrderDiv">
+
+
+<div class="block center login small" id="OrderDiv" style="overflow:scroll;overflow-y:scroll">
     <input type="hidden" value="@Url.Action("Order", "Order")" id="OrderAction" /> 
         <div class="block_head">
             <div class="bheadl"></div>
@@ -42,48 +43,54 @@
             </ul>
         </div>
         <div class="block_content">
-        <span class="help-block" id="generalRequired"></span>
+        <span class="label label-success" id="generalRequired"></span>
         <form method="post" id="OrderForm" class="form-stacked" style="display:block" action="">        
             <div class="clearfix">
                 <label for="FirstName">Your First Name:</label>
                 <div class="input">
                     <input type="text" size="20" name="" id="FirstName" class="span4" onclick="$('#firstNameRequired').hide();"/>
-                    <span class="help-block" id="firstNameRequired">Required.</span>
+                    <span class="label label-important" style="margin-left:15px" id="firstNameRequired">Please enter your first name!</span>
                 </div>
             </div>
             <div class="clearfix">
                 <label for="LastName">Your Last Name:</label>
                 <div class="input">
                     <input type="text" size="20" name="" id="LastName" class="span4" onclick="$('#lastNameRequired').hide();"/>
-                    <span class="help-block" id="lastNameRequired">Required.</span>
+                    <span class="label label-important" style="margin-left:15px" id="lastNameRequired">Please enter your last name!</span>
                 </div>
             </div>
             <div class="clearfix">
                 <label for="Address">Your Address:</label>
                 <div class="input">
                     <textarea id="Address" class="span4" onclick="$('#addressRequired').hide();"/>
-                    <span class="help-block" id="addressRequired">Required.</span>
+                    <span class="label label-important" style="margin-left:15px" id="addressRequired">Please enter your address!</span>
                 </div>
             </div>
             <div class="clearfix">
                 <label for="PostalCode">Your Post Code:</label>
                 <div class="input">
                     <input type="text" size="20" name="" id="PostalCode" class="span4" onclick="$('#postCodeRequired').hide();"/>
-                    <span class="help-block" id="postCodeRequired">Required.</span>
+                    <span class="label label-important" style="margin-left:15px" id="postCodeRequired">Please enter your post code!</span>
                 </div>
             </div>
             <div class="clearfix">
                 <label for="Phone">Your Phone:</label>
                 <div class="input">
                     <input type="text" size="20" name="" id="Phone" class="span4" onclick="$('#phoneRequired').hide();"/>
-                    <span class="help-block" id="phoneRequired">Required.</span>
+                    <span class="label label-important" style="margin-left:15px" id="phoneRequired">Please enter your first phone!</span>
                 </div>
             </div>
             <div class="clearfix">
-                <label for="Email">Email Address:</label>
+                <label for="Email">Your Email Address:</label>
                 <div class="input">
                     <input type="email" value="" size="30" name="" id="Email" class="span4" onclick="$('#emailRequired').hide();"/>
-                    <span class="help-block" id="emailRequired">Required.</span>
+                    <span class="label label-important" style="margin-left:15px" id="emailRequired">Please enter your email address!</span>
+                </div>
+            </div>
+            <div class="clearfix">
+                <label for="Description">Description for your order:</label>
+                <div class="input">
+                    <textarea id="Description" class="span4"/>
                 </div>
             </div>
         </form>

@@ -95,6 +95,7 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Cuisine.sdf" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\3.jpg" />
     <Content Include="Content\Images\addresshead.gif" />
@@ -248,7 +249,6 @@
     <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Content\ProductImages\" />
     <Folder Include="Design\earlyish\css\" />

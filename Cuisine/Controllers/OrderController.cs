@@ -118,11 +118,13 @@ namespace Cuisine.Controllers
                     order.FirstName = newOrder.FirstName.ToString();
                     order.LastName = newOrder.LastName.ToString();
                     order.OrderDate = DateTime.UtcNow;
+                    order.Status = (byte) OrderStatus.New;
                     order.Phone = newOrder.Phone.ToString();
                     order.PostalCode = newOrder.PostalCode.ToString();
+                    order.Description = newOrder.Description.ToString();
                     order.Address = newOrder.Address.ToString();
                     order.Email = newOrder.Email.ToString();
-                    order.OrderDetails = new List<OrderDetail>();
+                    context.Orders.Add(order);
 
                     ProductOrderViewModel viewData = (ProductOrderViewModel)Session["ProductOrderViewModel"];
                     order.Total = viewData.CartTotal;
@@ -136,9 +138,8 @@ namespace Cuisine.Controllers
                         orderDetail.UnitPrice = cart.Product.Price;
                         orderDetail.Product = cart.Product;
                         orderDetail.Order = order;
-                        order.OrderDetails.Add(orderDetail);
+                        context.OrderDetails.Add(orderDetail);
                     }
-
 
                     context.SaveChanges();
                     Session["ProductOrderViewModel"] = null;
@@ -150,6 +151,18 @@ namespace Cuisine.Controllers
                 return Json(new Order { IsSuccess = false, ErrorMessage = "" });
             }
             return Json(new Order { IsSuccess = false, ErrorMessage = ErrorMessage });
+        }
+
+        public ActionResult ClearCart()
+        {
+            var viewModel = new ProductOrderViewModel
+            {
+                Product = context.Products.ToList<Product>(),
+                Category = context.Categories.ToList<Category>()
+            };
+            Session["ProductOrderViewModel"] = viewModel;
+
+            return View("ShoppingCart",viewModel);  
         }
 
         private bool ValidateInput(Models.Order newOrder)

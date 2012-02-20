@@ -32,6 +32,12 @@ namespace Cuisine.Models
         [DataType(DataType.MultilineText)]
         public string Address { get; set; }
 
+        [StringLength(100)]
+        [DataType(DataType.MultilineText)]
+        public string Description { get; set; }
+
+        
+
         [Required(ErrorMessage = "City is required")]
         [StringLength(40)]
         public string City { get; set; }
@@ -69,6 +75,16 @@ namespace Cuisine.Models
         [ScaffoldColumn(false)]
         public System.Boolean IsSuccess { get; set; }
 
+        [ScaffoldColumn(false)]
+        public System.Byte Status { get; set; }
+
         public List<OrderDetail> OrderDetails { get; set; }
+    }
+
+    public enum OrderStatus
+    { 
+        New = 0,
+
+        Shipped=1
     }
 }

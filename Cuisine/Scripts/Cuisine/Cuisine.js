@@ -24,6 +24,17 @@ function DeleteFromBasket(ProductId) {
         }
     });
 }
+
+function ClearCart() {
+    $.ajax({
+        type: "post",
+        url: "/Order/ClearCart",
+        success: function (html) {
+            $("#divShoppingCard").html(html);
+        }
+    });
+}
+
 function UpdateBasket(ProductId) {
     $.ajax({
         type: "post",
@@ -69,11 +80,18 @@ function OrderOnline() {
             success: function (data) {
                 if (data.IsSuccess == true) {
                     $("#generalRequired").show();
-                    $("#generalRequired").html('<h5 style="color:green"> Order has been successfully added. Thanks for your order!</h5>');
+                    $("#generalRequired").html('Order has been successfully added. Thanks!');
+                    $("#generalRequired").addClass("label label-success");
+                    ClearScreen();
+                    ClearCart();
+                    setTimeout($.unblockUI, 2000);
                 }
                 else {
                     $("#generalRequired").show();
-                    $("#generalRequired").html('<h5 style="color:red"> Order has not been added. Sorry! </h5><h5 style="color:red"> ' + data.ErrorMessage + '</h5>');
+                    $("#generalRequired").html('Order has not been added. Sorry! </br> Message :' + data.ErrorMessage);
+                    $("#generalRequired").removeClass("label label-success").addClass("label label-important");
+                    ClearCart();
+                    setTimeout($.unblockUI, 2000);
                 }
             }
         });
@@ -117,11 +135,22 @@ function ValidateInput() {
 function getOrder() {
     var FirstName = $("#FirstName").val();
     var LastName = $("#LastName").val();
+    var Description = $("#Description").val();
     var Address = $("#Address").val();
     var Phone = $("#Phone").val();
     var PostalCode = $("#PostalCode").val();
     var Email = $("#Email").val();
 
     // poor man's validation
-    return { FirstName: FirstName, LastName: LastName, Address: Address, Phone: Phone, PostalCode: PostalCode, Email: Email };
+    return { FirstName: FirstName, LastName: LastName, Address: Address, Description: Description, Phone: Phone, PostalCode: PostalCode, Email: Email };
+}
+
+function ClearScreen() {
+    $("#FirstName").val("");
+    $("#LastName").val("");
+    $("#Address").val("");
+    $("#Description").val("");
+    $("#Phone").val("");
+    $("#PostalCode").val("");
+    $("#Email").val("");
 }
