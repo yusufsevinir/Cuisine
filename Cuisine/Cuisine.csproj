@@ -298,15 +298,13 @@
     <Content Include="Areas\Admin\Views\Category\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Order\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Order\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Order\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\History.cshtml" />
     <None Include="Design\cebgray\images\header.psd" />
     <None Include="Design\cebgray\images\logo.psd" />
     <None Include="Design\cebgray\images\navleft.psd" />

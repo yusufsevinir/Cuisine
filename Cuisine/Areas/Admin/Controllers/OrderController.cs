@@ -19,7 +19,12 @@ namespace Cuisine.Areas.Admin.Controllers
 
         public ViewResult Index()
         {
-            return View(db.Orders.ToList());
+            return View(db.Orders.Where(o=>o.Status== 1 ).ToList());
+        }
+
+        public ViewResult History()
+        {
+            return View(db.Orders.Where(o => o.IsSuccess).OrderByDescending(o=>o.OrderDate).Take(100).ToList());
         }
 
         //
@@ -68,25 +73,16 @@ namespace Cuisine.Areas.Admin.Controllers
         //
         // POST: /Admin/Order/Edit/5
 
-        [HttpPost]
-        public ActionResult Edit(Order order)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(order).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(order);
-        }
 
         //
         // GET: /Admin/Order/Delete/5
  
-        public ActionResult Delete(Guid id)
+        public ActionResult Shipped(Guid id)
         {
             Order order = db.Orders.Find(id);
-            return View(order);
+            order.Status = 2;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         //

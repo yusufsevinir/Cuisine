@@ -56,10 +56,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OrderId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OrderId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OrderId })
+        <td>           
+            @Html.ActionLink("Details", "Details", new { id=item.OrderId }) |            
+            @Html.ActionLink("Shipped", "Shipped", new { id=item.OrderId })
+            <input type="submit" value="Shipped/@item.OrderId" onclick="return confirm('Are you sure you want to change status to shipped  ? ')" />
         </td>
     </tr>
 }
