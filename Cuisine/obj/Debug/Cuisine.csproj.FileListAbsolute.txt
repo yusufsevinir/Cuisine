@@ -54,3 +54,10 @@ C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\EntityFramework.xml
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.dll
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\Cuisine.dll
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\Cuisine.pdb
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\EntityFramework.dll
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\EntityFramework.xml
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.dll
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.pdb

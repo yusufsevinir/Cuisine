@@ -29,6 +29,13 @@ namespace Cuisine
                 , new[] { "Cuisine.Controllers" }
             );
 
+            //admin login
+            routes.MapRoute(
+                "Admin_Index",
+                "Admin",
+                new { controller = "Order", action = "Index" }
+                );
+
         }
 
         protected void Application_Start()
