@@ -10,10 +10,9 @@ namespace Cuisine.Controllers
 {
     public class OrderController : Controller
     {
-        private CuisineEntities context = new CuisineEntities();
-        //
-        // GET: /Order/
+        private CuisineEntities db = CuisineEntities.Entities;
 
+        
         private string ErrorMessage = "";
         public ActionResult Index()
         {
@@ -22,8 +21,8 @@ namespace Cuisine.Controllers
             {
                 viewModel = new ProductOrderViewModel
                                 {
-                                    Product = context.Products.ToList<Product>(),
-                                    Category = context.Categories.ToList<Category>()
+                                    Product = db.Products.ToList<Product>(),
+                                    Category = db.Categories.ToList<Category>()
                                 };
                 Session["ProductOrderViewModel"] = viewModel;
             }
@@ -47,8 +46,8 @@ namespace Cuisine.Controllers
             if (viewModel == null) {
                 viewModel = new ProductOrderViewModel
                 {
-                    Product = context.Products.ToList<Product>(),
-                    Category = context.Categories.ToList<Category>()
+                    Product = db.Products.ToList<Product>(),
+                    Category = db.Categories.ToList<Category>()
                 };
                 Session["ProductOrderViewModel"] = viewModel;
             }
@@ -67,7 +66,7 @@ namespace Cuisine.Controllers
             if (!exist)
             {
                 newCart.CartId = Guid.NewGuid().ToString();
-                newCart.Product = context.Products.FirstOrDefault(p => p.ProductId == productId);
+                newCart.Product = db.Products.FirstOrDefault(p => p.ProductId == productId);
                 newCart.ProductId = productId;
                 newCart.DateCreated = DateTime.UtcNow;
                 newCart.Count = 1;
@@ -107,43 +106,32 @@ namespace Cuisine.Controllers
         }
 
         [HttpPost]
-        public ActionResult Order(Order newOrder)
+        public ActionResult Order(Order order)
         {
             try
             {
-                if (ValidateInput(newOrder))
-                {
-                    Order order = new Order();
-                    order.OrderId = Guid.NewGuid();
-                    order.FirstName = newOrder.FirstName.ToString();
-                    order.LastName = newOrder.LastName.ToString();
+                if ( ModelState.IsValid && ValidateInput(order))
+                {                 
                     order.OrderDate = DateTime.UtcNow;
-                    order.Status = (byte) OrderStatus.New;
-                    order.Phone = newOrder.Phone.ToString();
-                    order.PostalCode = newOrder.PostalCode.ToString();
-                    order.Description = newOrder.Description.ToString();
-                    order.Address = newOrder.Address.ToString();
-                    order.Email = newOrder.Email.ToString();
-                    context.Orders.Add(order);
-
+                    order.Status = (byte)OrderStatus.New;
+                    order.OrderId = Guid.NewGuid();
                     ProductOrderViewModel viewData = (ProductOrderViewModel)Session["ProductOrderViewModel"];
                     order.Total = viewData.CartTotal;
                     foreach (var cart in viewData.CartItems)
                     {
                         OrderDetail orderDetail = new OrderDetail();
                         orderDetail.OrderDetailId = Guid.NewGuid();
-                        orderDetail.OrderId = order.OrderId;
-                        orderDetail.ProductId = cart.ProductId;
                         orderDetail.Quantity = cart.Count;
                         orderDetail.UnitPrice = cart.Product.Price;
-                        orderDetail.Product = cart.Product;
-                        orderDetail.Order = order;
-                        context.OrderDetails.Add(orderDetail);
+                        orderDetail.ProductId = cart.ProductId;
+                        orderDetail.OrderId = order.OrderId;
+                        db.OrderDetails.Add(orderDetail);
                     }
 
-                    context.SaveChanges();
+                    db.Orders.Add(order);                    
+                    db.SaveChanges();                    
                     Session["ProductOrderViewModel"] = null;
-                    return Json(new Order { IsSuccess = true, ErrorMessage = "" });
+                    return Json(new Order { IsSuccess = true, ErrorMessage = "" });                
                 }
             }
             catch(Exception ex)
@@ -157,8 +145,8 @@ namespace Cuisine.Controllers
         {
             var viewModel = new ProductOrderViewModel
             {
-                Product = context.Products.ToList<Product>(),
-                Category = context.Categories.ToList<Category>()
+                Product = db.Products.ToList<Product>(),
+                Category = db.Categories.ToList<Category>()
             };
             Session["ProductOrderViewModel"] = viewModel;
 

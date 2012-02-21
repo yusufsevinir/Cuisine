@@ -18,9 +18,7 @@
         <th>
             Address
         </th>
-        <th>
-            City
-        </th>
+       
         <th>
             PostalCode
         </th>
@@ -30,7 +28,12 @@
         <th>
             Email
         </th>
-        <th></th>
+        <th>
+        Description
+        </th>
+        <th>
+        Order Date
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -44,9 +47,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Address)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
+     
         <td>
             @Html.DisplayFor(modelItem => item.PostalCode)
         </td>
@@ -56,10 +57,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
         <td>           
             @Html.ActionLink("Details", "Details", new { id=item.OrderId }) |            
-            @Html.ActionLink("Shipped", "Shipped", new { id=item.OrderId })
-            <input type="submit" value="Shipped/@item.OrderId" onclick="return confirm('Are you sure you want to change status to shipped  ? ')" />
+            @Html.ActionLink("Shipped", "Shipped", new { id=item.OrderId })           
         </td>
     </tr>
 }

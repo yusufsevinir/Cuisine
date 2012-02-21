@@ -7,8 +7,8 @@ using System.Data.Entity;
 namespace Cuisine.Models
 {
     public class SampleData : 
-        //DropCreateDatabaseIfModelChanges<CuisineEntities>
-        DropCreateDatabaseAlways<CuisineEntities>    
+        DropCreateDatabaseIfModelChanges<CuisineEntities>
+        //DropCreateDatabaseAlways<CuisineEntities>    
     {
         protected override void Seed(CuisineEntities context)
         {

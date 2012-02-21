@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Cuisine.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    //[Authorize(Roles = "Administrator")]
     public class ProductController : Controller
     {
         private CuisineEntities db = new CuisineEntities();

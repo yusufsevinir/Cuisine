@@ -1,54 +1,87 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="734" fromTop="17" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="256" fromTop="14" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Product/f:Index.cshtml" caret="0" fromTop="0" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:Shared/f:Error.cshtml" caret="0" fromTop="0" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:ShoppingCart/f:Index.cshtml" caret="0" fromTop="0" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Views/d:ShoppingCart/f:CartSummary.cshtml" caret="0" fromTop="0" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Shared/f:AdminLayout.cshtml" caret="1101" fromTop="22" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:CategoryController.cs" caret="0" fromTop="0" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Category/f:Create.cshtml" caret="1059" fromTop="20" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Details.cshtml" caret="1210" fromTop="19" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="1205" fromTop="57" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:Order.cs" caret="1458" fromTop="47" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="5308" fromTop="14" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:ShoppingCartController.cs" caret="221" fromTop="9" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/f:AdminAreaRegistration.cs" caret="582" fromTop="22" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="1206" fromTop="19" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:ProductController.cs" caret="433" fromTop="21" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="1707" fromTop="24" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="387" fromTop="14" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:CategoryController.cs" caret="404" fromTop="16" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:ProductController.cs" caret="290" fromTop="12" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Details.cshtml" caret="633" fromTop="14" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Web.config" caret="3864" fromTop="24" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:SampleData.cs" caret="299" fromTop="11" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:HomeController.cs" caret="623" fromTop="19" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:CuisineEntities.cs" caret="921" fromTop="26" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="1173" fromTop="20" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="1253" fromTop="29" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:Order.cs" caret="2089" fromTop="23" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="3816" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Details.cshtml" caret="1210" fromTop="19" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="1762" fromTop="11" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="2031" fromTop="16" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="1461" fromTop="23" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Shared/f:AdminLayout.cshtml" caret="1093" fromTop="22" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="1367" fromTop="18" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="708" fromTop="16" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="1204" fromTop="21" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/f:AdminAreaRegistration.cs" caret="582" fromTop="25" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/f:AdminAreaRegistration.cs" caret="582" fromTop="27" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/f:AdminAreaRegistration.cs" caret="582" fromTop="22" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="1206" fromTop="19" />
-      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="1165" fromTop="18" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/f:Global.asax.cs" caret="1702" fromTop="22" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:CuisineEntities.cs" caret="449" fromTop="13" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:CuisineEntities.cs" caret="776" fromTop="21" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:CuisineEntities.cs" caret="751" fromTop="21" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:CuisineEntities.cs" caret="921" fromTop="26" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="4150" fromTop="10" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="4983" fromTop="24" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="4712" fromTop="19" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="326" fromTop="14" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:SampleData.cs" caret="248" fromTop="10" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Details.cshtml" caret="633" fromTop="27" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="403" fromTop="16" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="984" fromTop="15" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="343" fromTop="8" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="914" fromTop="10" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="542" fromTop="21" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Models/f:Order.cs" caret="2089" fromTop="23" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="1121" fromTop="18" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Controllers/f:OrderController.cs" caret="3914" fromTop="18" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:ProductController.cs" caret="290" fromTop="12" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="272" fromTop="11" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:CategoryController.cs" caret="272" fromTop="11" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Controllers/f:OrderController.cs" caret="714" fromTop="18" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="1542" fromTop="22" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="1333" fromTop="33" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:Index.cshtml" caret="573" fromTop="20" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="562" fromTop="1" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="658" fromTop="6" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="1421" fromTop="34" />
+      <File id="32DCD27D-A84C-4250-B657-408B3620A9AC/d:Areas/d:Admin/d:Views/d:Order/f:History.cshtml" caret="1253" fromTop="29" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
       <Item value="Where`1" priority="22" />
+      <Item value="Add`0" priority="27" />
     </ItemStatistics>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="o" priority="63" />
       <Item value="Index`0" priority="31" />
-      <Item value="order" priority="31" />
-      <Item value="db" priority="31" />
+      <Item value="order" priority="288" />
+      <Item value="db" priority="223" />
       <Item value="Html" priority="29" />
       <Item value="item" priority="29" />
       <Item value="MvcWebRazorHostFactory`0" priority="31" />
+      <Item value="OrderStatus`0" priority="58" />
+      <Item value="newOrder" priority="31" />
+      <Item value="ModelState" priority="31" />
+      <Item value="New" priority="16" />
+      <Item value="new" priority="31" />
+      <Item value="Guid`0" priority="31" />
+      <Item value="void" priority="31" />
+      <Item value="override" priority="31" />
+      <Item value="DivideByZeroException`0" priority="63" />
+      <Item value="DbContext`0" priority="31" />
+      <Item value="Entities" priority="32" />
+      <Item value="CuisineEntities`0" priority="31" />
+      <Item value="Order`0" priority="31" />
+      <Item value="byte" priority="130" />
+      <Item value="bool" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cuisine.Models.CuisineEntities">
       <Item value="SaveChanges`0" priority="26" />
+      <Item value="Entry`1" priority="26" />
+      <Item value="Orders" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="RazorTransitionCompletionContext">
       <Item value="Html" priority="9" />
@@ -60,7 +93,10 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cuisine.Models.Order">
       <Item value="IsSuccess" priority="26" />
-      <Item value="OrderDate" priority="26" />
+      <Item value="OrderDate" priority="80" />
+      <Item value="Status" priority="26" />
+      <Item value="OrderId" priority="53" />
+      <Item value="Description" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
       <Item value="Take`1" priority="22" />
@@ -69,6 +105,28 @@
     <ItemStatistics item="Qualified:System.Linq.IOrderedQueryable`1">
       <Item value="First`1" priority="26" />
       <Item value="Take`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cuisine.Models.OrderStatus">
+      <Item value="Shipped" priority="53" />
+      <Item value="New" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
+      <Item value="IsValid" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cuisine.Models.OrderDetail">
+      <Item value="OrderId" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cuisine.Models.CuisineEntities">
+      <Item value="Entities" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContext">
+      <Item value="Items" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cuisine.Models.Cart">
+      <Item value="ProductId" priority="22" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
