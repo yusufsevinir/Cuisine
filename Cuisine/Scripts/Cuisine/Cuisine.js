@@ -83,15 +83,16 @@ function OrderOnline() {
                     $("#generalRequired").html('Order has been successfully added. Thanks!');
                     $("#generalRequired").addClass("label label-success");
                     ClearScreen();
+                    $('#OrderForm').attr("visible","false");
                     ClearCart();
-                    setTimeout($.unblockUI, 2000);
+//                    setTimeout($.unblockUI, 2000);
                 }
                 else {
                     $("#generalRequired").show();
                     $("#generalRequired").html('Order has not been added. Sorry! </br> Message :' + data.ErrorMessage);
                     $("#generalRequired").removeClass("label label-success").addClass("label label-important");
                     ClearCart();
-                    setTimeout($.unblockUI, 2000);
+//                    setTimeout($.unblockUI, 2000);
                 }
             }
         });

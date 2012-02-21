@@ -121,7 +121,7 @@ namespace Cuisine.Controllers
                     order.Status = (byte) OrderStatus.New;
                     order.Phone = newOrder.Phone.ToString();
                     order.PostalCode = newOrder.PostalCode.ToString();
-                    order.Description = newOrder.Description.ToString();
+                    order.Description = newOrder.Description ?? "";
                     order.Address = newOrder.Address.ToString();
                     order.Email = newOrder.Email.ToString();
                     context.Orders.Add(order);
