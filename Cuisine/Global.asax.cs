@@ -47,5 +47,19 @@ namespace Cuisine
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
+
+       
+
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+            //CuisineEntities entities = new CuisineEntities();
+           
+        }
+
+
+        void Application_EndRequest(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

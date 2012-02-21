@@ -21,6 +21,7 @@ namespace Cuisine.Controllers
 
         private List<Product> GetDeals()
         {
+            
             return storeDB.Products.Where(p => p.Category.Name == "Deals").ToList();
         }
 

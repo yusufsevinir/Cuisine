@@ -36,24 +36,10 @@ namespace Cuisine.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        
-
-        [Required(ErrorMessage = "City is required")]
-        [StringLength(40)]
-        public string City { get; set; }
-
-        //[Required(ErrorMessage = "State is required")]
-        //[StringLength(40)]
-        //public string State { get; set; }
-
         [Required(ErrorMessage = "Postal Code is required")]
         [DisplayName("Postal Code")]
         [StringLength(10)]
         public string PostalCode { get; set; }
-
-        //[Required(ErrorMessage = "Country is required")]
-        //[StringLength(40)]
-        //public string Country { get; set; }
 
         [Required(ErrorMessage = "Phone is required")]
         [StringLength(24)]
@@ -76,7 +62,7 @@ namespace Cuisine.Models
         public System.Boolean IsSuccess { get; set; }
 
         [ScaffoldColumn(false)]
-        public System.Byte Status { get; set; }
+        public byte Status { get; set; }
 
         public List<OrderDetail> OrderDetails { get; set; }
     }
