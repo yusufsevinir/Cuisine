@@ -110,11 +110,12 @@ namespace Cuisine.Controllers
         {
             try
             {
-                if ( ModelState.IsValid && ValidateInput(order))
+                if (ValidateInput(order))
                 {                 
                     order.OrderDate = DateTime.UtcNow;
                     order.Status = (byte)OrderStatus.New;
                     order.OrderId = Guid.NewGuid();
+                    order.Description = order.Description ?? "";
                     ProductOrderViewModel viewData = (ProductOrderViewModel)Session["ProductOrderViewModel"];
                     order.Total = viewData.CartTotal;
                     foreach (var cart in viewData.CartItems)
@@ -136,7 +137,7 @@ namespace Cuisine.Controllers
             }
             catch(Exception ex)
             {
-                return Json(new Order { IsSuccess = false, ErrorMessage = "" });
+                return Json(new Order { IsSuccess = false, ErrorMessage = ErrorMessage });
             }
             return Json(new Order { IsSuccess = false, ErrorMessage = ErrorMessage });
         }
@@ -155,6 +156,8 @@ namespace Cuisine.Controllers
 
         private bool ValidateInput(Models.Order newOrder)
         {
+            ProductOrderViewModel viewData = (ProductOrderViewModel)Session["ProductOrderViewModel"];
+            
             bool isValid = true;
             if (newOrder == null)
             {
@@ -189,6 +192,11 @@ namespace Cuisine.Controllers
             else if (newOrder.Email == "" || newOrder.Email.ToString().Contains("@") == false)
             {
                 ErrorMessage = "Please enter email address!";
+                isValid = false;
+            }
+            else if (viewData.CartTotal < 11) 
+            {
+                ErrorMessage = "You need to spend £11 or more to order!";
                 isValid = false;
             }
             return isValid;

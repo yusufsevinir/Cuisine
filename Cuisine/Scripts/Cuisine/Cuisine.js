@@ -57,16 +57,24 @@ function AddDeal(ProductId) {
 }
 
 function OrderCuisine() {
-    $.ajax({
-        type: "post",
-        url: "/Order/GetOrderDetails",
-        success: function (html) {
-        $.blockUI({
-            message: html, 
-                css: { top: '10%',left: '36%',width:'28%', right: '36%',bottom:'10%' }
-            });
-        }
-    });
+    if ($("#CartTotal").val() < 11) { 
+        $.blockUI({ message: '<span style="font-size:16px;color:white" id="generalRequired">You need to spend £11 or more to order</span>',
+                        css: { backgroundColor: 'red' }
+                    });
+                    setTimeout($.unblockUI, 2000);
+    }
+    else {
+        $.ajax({
+            type: "post",
+            url: "/Order/GetOrderDetails",
+            success: function (html) {
+                $.blockUI({
+                    message: html,
+                    css: { top: '10%', left: '36%', width: '28%', right: '36%', bottom: '10%' }
+                });
+            }
+        });
+    }
 }
 
 function OrderOnline() {
@@ -79,20 +87,25 @@ function OrderOnline() {
             dataType: 'json',
             success: function (data) {
                 if (data.IsSuccess == true) {
-                    $("#generalRequired").show();
-                    $("#generalRequired").html('Order has been successfully added. Thanks!');
-                    $("#generalRequired").addClass("label label-success");
+                    // $("#generalRequired").show();
+                    // $("#generalRequired").html('Order has been successfully added. Thanks!');
+                    //$("#generalRequired").addClass("label label-success");
                     ClearScreen();
-                    $('#OrderForm').attr("visible","false");
                     ClearCart();
-//                    setTimeout($.unblockUI, 2000);
+                    $.blockUI({ message: '<span style="font-size:16px;color:white" id="generalRequired">Order has been successfully added. Thanks!</span>',
+                        css: { backgroundColor: 'green' }
+                    });
+                    setTimeout($.unblockUI, 2000);
                 }
                 else {
-                    $("#generalRequired").show();
-                    $("#generalRequired").html('Order has not been added. Sorry! </br> Message :' + data.ErrorMessage);
-                    $("#generalRequired").removeClass("label label-success").addClass("label label-important");
-                    ClearCart();
-//                    setTimeout($.unblockUI, 2000);
+                    //                    $("#generalRequired").show();
+                    //                    $("#generalRequired").html('Order has not been added. Sorry! </br> Message :' + data.ErrorMessage);
+                    //                    $("#generalRequired").removeClass("label label-success").addClass("label label-important");
+                    var message = 'Order has not been added. Sorry! </br> Message :' + data.ErrorMessage;
+                    $.blockUI({ message: '<span style="font-size:16px;color:white" id="generalRequired">' + message + '</span>',
+                        css: { backgroundColor: 'red' }
+                    });
+                    setTimeout($.unblockUI, 2000);
                 }
             }
         });

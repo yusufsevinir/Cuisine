@@ -3,6 +3,13 @@
     Layout = "";
 }
 
+<script type="text/javascript">
+    $('#submit').click(
+         function(){
+        
+    }
+    );
+</script>
 <div class="row">
     <div class="span4">
     <div>
@@ -43,6 +50,7 @@
 			        <td>
                         <div style="font-weight:bold;">
                             <div style="float: right;"><h5>@Model.CartTotal</h5></div>
+                            <input type ="hidden" id="CartTotal" value=@Model.CartTotal />
                             <div style="float: right;"><h5>£</h5></div><div style="clear:both"></div>
                         </div>
                     </td>
