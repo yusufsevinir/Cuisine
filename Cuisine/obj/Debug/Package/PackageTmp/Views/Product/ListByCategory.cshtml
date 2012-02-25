@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Cuisine.Models.Product>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+    <div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="span5">
+            <h2>Heading</h2>
+            <p><img alt="@product.Name" src="@product.ProductImageUrl" /></p>
+            <p><a href="@Url.Action("Details", "Store", new { id = product.ProductId })"><span>@product.Name</span></a></p>   
+        </div>  
+    }
+    </div>
+

@@ -1,0 +1,75 @@
+﻿@model Cuisine.ViewModels.ProductOrderViewModel
+@{
+    Layout = "";
+}
+
+<script type="text/javascript">
+    $('#submit').click(
+         function(){
+        
+    }
+    );
+</script>
+<div class="row">
+    <div class="span4">
+    <div>
+        <h4>
+            <span class="label label-info" style="font-size:14px">Your order</span>
+        </h4>
+    </div>    
+    <table class="table-striped">
+        <tbody>
+            
+            @if (Model != null)
+            {
+                foreach (var cart in Model.CartItems)
+                {
+                <tr>
+			        <td colspan="3"><h6>@cart.Product.Name</h6></td>
+		        </tr>
+		        <tr>
+			        <td style="padding-bottom:3px;">
+                        <div><h5>@cart.Count</h5></div>
+                    </td>
+			        <td>
+                        <div style="font-weight:bold;">
+                            <div style="float: right;"><h5>@cart.Product.Price</h5></div>
+                            <div style="float: right;"><h5>£</h5></div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </td>
+			        <td>
+                        <input type="image" src="../../Content/Images/button-minus.gif"
+                            onclick="DeleteFromBasket(@cart.ProductId);" style="border-width:0px;"/>
+                    </td>
+		        </tr>
+                }
+            }
+		        <tr>
+			        <td><h5>Subtotal:</h5></td>
+			        <td>
+                        <div style="font-weight:bold;">
+                            <div style="float: right;"><h5>@Model.CartTotal</h5></div>
+                            <input type ="hidden" id="CartTotal" value=@Model.CartTotal />
+                            <div style="float: right;"><h5>£</h5></div><div style="clear:both"></div>
+                        </div>
+                    </td>
+			        <td>
+                    </td>
+		        </tr>
+		        <tr>
+			        <td colspan="3">
+                        <div>
+                            <p><h6>You need to spend £11 or more to order</h6></p>
+                        </div>
+                    </td>
+		        </tr>
+		        <tr align="left">
+			        <td colspan="3" style="padding-top:15px;">        
+                        <input type="submit" value="Order Now" class="btn btn-primary" onclick="OrderCuisine();"/>
+                    </td>
+		        </tr>
+	    </tbody>
+    </table>
+    </div>
+</div>

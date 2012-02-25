@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Web.Caching;
 using System.Web.Mvc;
 using Cuisine.Models;
 
@@ -13,7 +14,7 @@ namespace Cuisine.Controllers
         CuisineEntities storeDB = new CuisineEntities();
 
         public ActionResult Index()
-        {
+        {                       
             // Get most popular albums
             var albums = GetDeals();
             return View(albums);

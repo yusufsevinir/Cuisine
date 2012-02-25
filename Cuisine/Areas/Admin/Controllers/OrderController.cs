@@ -19,7 +19,7 @@ namespace Cuisine.Areas.Admin.Controllers
 
         public ViewResult Index()
         {
-            return View(db.Orders.Where(o=>o.Status == (byte)OrderStatus.New).ToList());
+            return View(db.Orders.Where(o=>o.Status == (byte)OrderStatus.New).OrderBy(o=>o.OrderDate).ToList());
         } 
 
         public ViewResult History()

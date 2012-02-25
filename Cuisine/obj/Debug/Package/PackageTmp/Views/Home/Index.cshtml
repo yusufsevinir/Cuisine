@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Cuisine.Models.Product>
+@{
+    ViewBag.Title = "South Bridge Charcoal Grill- Halal";
+}
+    <script src="../../Scripts/jquery.easyAccordion.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Scripts/utility.js"></script>
+<script type="text/javascript">
+    $("#liHome").addClass('active');
+</script>
+<div id="slider">
+    <div id="accordion-1">
+        <dl>
+        @foreach (var item in Model)
+        {
+            <dt>@item.Name</dt>            
+            <dd>
+            <div style="float: left; width: 70%;">
+            <h2>@item.Description</h2>
+
+            </div>
+            <div style="float: right; width: 30%;">
+            <img src="../../Content/Images/images3.jpg" alt="@item.Name" />
+            <br />           
+            <h3>£@item.Price </h3>
+            <input type="submit" onclick ="AddDeal(@item.ProductId)" style="width:80px" value="Order" class="btn-primary"/>       
+            </div>                   
+
+            </dd>                        
+        }            
+        </dl>
+    </div>
+</div>
+<div>
+    <h4>About the Company</h4>
+    <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac..</em></p>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</div>

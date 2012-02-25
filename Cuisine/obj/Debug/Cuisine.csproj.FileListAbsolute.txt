@@ -1,59 +1,3 @@
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\MvcMusicStore.dll
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\MvcMusicStore.pdb
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\EntityFramework.dll
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\bin\EntityFramework.xml
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\obj\Debug\MvcMusicStore.dll
-C:\Users\Turevo\Documents\OpenSource\ASP.NET MVC\MvcMusicStore-v3.0\MvcMusicStore-Completed\Cuisine\obj\Debug\MvcMusicStore.pdb
-C:\Users\neccar\.ssh\Cuisine\Cuisine\bin\EntityFramework.dll
-C:\Users\neccar\.ssh\Cuisine\Cuisine\bin\EntityFramework.xml
-C:\Users\neccar\.ssh\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\neccar\.ssh\Cuisine\Cuisine\bin\Cuisine.dll
-C:\Users\neccar\.ssh\Cuisine\Cuisine\bin\Cuisine.pdb
-C:\Users\neccar\.ssh\Cuisine\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\neccar\.ssh\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\bin\Cuisine.dll
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\bin\Cuisine.pdb
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\bin\EntityFramework.dll
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\bin\EntityFramework.xml
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\Turevo\Desktop\royalblue797-Cuisine-2f8983b\Cuisine\obj\Debug\Cuisine.pdb
-C:\Users\neccar\Cuisine\Cuisine\bin\Cuisine.dll
-C:\Users\neccar\Cuisine\Cuisine\bin\Cuisine.pdb
-C:\Users\neccar\Cuisine\Cuisine\bin\EntityFramework.dll
-C:\Users\neccar\Cuisine\Cuisine\bin\EntityFramework.xml
-C:\Users\neccar\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\neccar\Cuisine\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\neccar\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
-C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\Cuisine.dll
-C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\Cuisine.pdb
-C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\EntityFramework.dll
-C:\Users\neccar\Downloads\Cuisine\Cuisine\bin\EntityFramework.xml
-C:\Users\neccar\Downloads\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\neccar\Downloads\Cuisine\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\neccar\Downloads\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\Cuisine.dll
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\Cuisine.pdb
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\EntityFramework.dll
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\bin\EntityFramework.xml
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\Turevo\Desktop\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\Cuisine.dll
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\Cuisine.pdb
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\EntityFramework.dll
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\bin\EntityFramework.xml
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\neccar\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\bin\Cuisine.dll
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\bin\Cuisine.pdb
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\bin\EntityFramework.dll
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\bin\EntityFramework.xml
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\obj\Debug\Cuisine.dll
-C:\Users\Turevo\Documents\OpenSource\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\Cuisine.dll
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\Cuisine.pdb
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\EntityFramework.dll
@@ -61,3 +5,4 @@ C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\EntityFramework.xml
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.dll
 C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\obj\Debug\Cuisine.pdb
+C:\Users\neccar\Cuisine\Cuisine\Cuisine\Cuisine\bin\System.Web.Providers.dll

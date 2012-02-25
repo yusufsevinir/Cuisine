@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/Cuisine_deploy" />
+  <setParameter name="CuisineEntities-Web.config Connection String" value="Data Source=|DataDirectory|Cuisine.sdf" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=|DataDirectory|Cuisine.sdf" />
+</parameters>
